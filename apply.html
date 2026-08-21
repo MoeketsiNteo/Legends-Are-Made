@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply | Legends Are Made</title>
+</head>
+
+<body>
+
+    <!--Website Header-->
+    <header>
+
+        <!--Navigation Menu-->
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="competitions.html">Competitions</a>
+            <a href="apply.html">Apply</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!--Application Section-->
+        <section>
+
+            <h1>Apply for a Competition</h1>
+
+            <p>
+                Complete the form below to apply for an upcoming
+                Legends Are Made Dance Series competition.
+            </p>
+
+
+            <!--Application Form-->
+            <form>
+
+                <!--Competitor Name-->
+                <label for="name">Competitor Name:</label>
+                <input type="text" id="name" name="name" required>
+
+
+                <!--Email Address-->
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+
+                <!--Contact Number-->
+                <label for="phone">Contact Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+
+                <!--Dance Studio-->
+                <label for="studio">Dance Studio:</label>
+                <input type="text" id="studio" name="studio">
+
+
+                <!--Competition Category-->
+                <label for="category">Competition Category:</label>
+
+                <select id="category" name="category" required>
+                    <option value="">Select a category</option>
+                    <option value="latin">Latin</option>
+                    <option value="ballroom">Ballroom</option>
+                    <option value="freestyle">Freestyle</option>
+                    <option value="vocals">Singing / Vocals</option>
+                    <option value="cheer">Performing Cheer</option>
+                </select>
+
+
+                <!--Age Group-->
+                <label for="age-group">Age Group:</label>
+
+                <select id="age-group" name="age-group" required>
+                    <option value="">Select age group</option>
+                    <option value="junior">Junior</option>
+                    <option value="adult">Adult</option>
+                    <option value="senior">Senior</option>
+                </select>
+
+
+                <!--Message-->
+                <label for="message">Message:</label>
+
+                <textarea id="message"
+                          name="message"
+                          rows="5"
+                          placeholder="Enter any additional information">
+                </textarea>
+
+
+                <!--Submit Button-->
+                <button type="submit">Submit Application</button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Legends Are Made Dance Series</p>
+    </footer>
+
+</body>
+</html>
