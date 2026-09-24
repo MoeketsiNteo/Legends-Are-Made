@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apply | Legends Are Made</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- HEADER -->
+    <!-- HEADER AND NAVIGATION -->
     <header>
         <nav>
             <a href="home.html" class="logo">LEGENDS<span>///</span></a>
@@ -25,102 +25,78 @@
         </nav>
     </header>
 
-
     <main>
 
-        <!-- APPLY HERO -->
-        <section class="page-hero apply-hero">
+        <!-- PAGE INTRODUCTION -->
+        <section class="page-header">
+            <h1>APPLY</h1>
 
-            <div>
-                <p class="eyebrow">03 / ENTER THE STAGE</p>
-
-                <h1>
-                    MAKE YOUR<br>
-                    <span>MOVE.</span>
-                </h1>
-
-                <p>
-                    Complete the form below to apply for an
-                    upcoming Legends Are Made competition.
-                </p>
-            </div>
-
+            <p>
+                Complete the application form to apply for a
+                Legends Are Made competition.
+            </p>
         </section>
 
-
-        <!-- APPLICATION -->
+        <!-- APPLICATION FORM -->
         <section class="form-section">
 
-            <div class="form-intro">
+            <div class="form-container">
 
-                <div class="section-label">
-                    YOUR ENTRY
-                </div>
+                <h2>Competition Application</h2>
 
-                <h2>
-                    YOUR STORY<br>
-                    <span>STARTS HERE.</span>
-                </h2>
-
-                <p>
-                    Tell us a little about yourself and select
-                    the category you would like to enter.
-                </p>
-
-            </div>
-
-
-            <form>
-
-                <div class="form-row">
+                <form>
 
                     <div class="form-group">
-                        <label for="name">Competitor Name</label>
+                        <label for="competitor-name">
+                            Competitor Name
+                        </label>
+
                         <input type="text"
-                               id="name"
-                               name="name"
-                               placeholder="Enter your full name"
+                               id="competitor-name"
+                               name="competitor-name"
+                               placeholder="Enter your name"
                                required>
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Email Address</label>
+                        <label for="email">
+                            Email Address
+                        </label>
+
                         <input type="email"
                                id="email"
                                name="email"
-                               placeholder="Enter your email"
+                               placeholder="Enter your email address"
                                required>
                     </div>
 
-                </div>
-
-
-                <div class="form-row">
-
                     <div class="form-group">
-                        <label for="phone">Contact Number</label>
+                        <label for="contact-number">
+                            Contact Number
+                        </label>
+
                         <input type="tel"
-                               id="phone"
-                               name="phone"
+                               id="contact-number"
+                               name="contact-number"
                                placeholder="Enter your contact number"
                                required>
                     </div>
 
                     <div class="form-group">
-                        <label for="studio">Dance Studio</label>
+                        <label for="dance-studio">
+                            Dance Studio
+                        </label>
+
                         <input type="text"
-                               id="studio"
-                               name="studio"
-                               placeholder="Enter studio name">
+                               id="dance-studio"
+                               name="dance-studio"
+                               placeholder="Enter dance studio name">
                     </div>
 
-                </div>
-
-
-                <div class="form-row">
-
                     <div class="form-group">
-                        <label for="category">Competition Category</label>
+                        <label for="category">
+                            Competition Category
+                        </label>
 
                         <select id="category"
                                 name="category"
@@ -147,16 +123,13 @@
                             </option>
 
                             <option value="cheer">
-                                Performance Cheer
+                                Performing Cheer
                             </option>
 
                         </select>
-
                     </div>
 
-
                     <div class="form-group">
-
                         <label for="age-group">
                             Age Group
                         </label>
@@ -182,41 +155,35 @@
                             </option>
 
                         </select>
-
                     </div>
 
-                </div>
+                    <div class="form-group">
+                        <label for="message">
+                            Message
+                        </label>
 
+                        <textarea id="message"
+                                  name="message"
+                                  rows="6"
+                                  placeholder="Enter any additional information"></textarea>
+                    </div>
 
-                <div class="form-group">
+                    <button type="submit">
+                        SUBMIT APPLICATION
+                    </button>
 
-                    <label for="message">
-                        Additional Information
-                    </label>
+                </form>
 
-                    <textarea id="message"
-                              name="message"
-                              rows="6"
-                              placeholder="Tell us anything else we should know..."></textarea>
-
-                </div>
-
-
-                <button type="submit">
-                    SUBMIT APPLICATION ↗
-                </button>
-
-            </form>
+            </div>
 
         </section>
 
     </main>
 
-
     <!-- FOOTER -->
     <footer>
 
-        <div class="footer-top">
+        <div class="footer-content">
 
             <div>
                 <div class="footer-logo">
@@ -224,8 +191,7 @@
                 </div>
 
                 <p>
-                    Every performer has a story.<br>
-                    Make yours legendary.
+                    Legends Are Made Dance Series
                 </p>
             </div>
 
@@ -240,8 +206,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p>© 2026 Legends Are Made Dance Series</p>
-            <p>South Africa</p>
+            <p>&copy; 2026 Legends Are Made Dance Series</p>
         </div>
 
     </footer>
