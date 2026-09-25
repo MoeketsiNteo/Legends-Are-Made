@@ -93,7 +93,7 @@ The following screenshots show all website pages on a desktop/laptop screen.
 
 #### Gallery
 
-![Gallery Page - Desktop](screenshots/desktop-gallery.png)
+![Gallery Page - Desktop](https://github.com/MoeketsiNteo/Legends-Are-Made/blob/b5fe82661a1625b05de795cccac3812a31edc15e/desktop-gallery.png)
 
 #### Contact
 
