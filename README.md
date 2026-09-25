@@ -118,7 +118,7 @@ The following screenshots show all website pages on a tablet device.
 
 #### Gallery
 
-![Gallery Page - Tablet](screenshots/tablet-gallery.png)
+![Gallery Page - Tablet](https://github.com/MoeketsiNteo/Legends-Are-Made/blob/3d934bdcac9667d9e80e1dfd00957a672a7676c7/tablet-gallery.png)
 
 #### Contact
 
