@@ -110,7 +110,7 @@ The following screenshots show all website pages on a tablet device.
 
 #### Competitions
 
-![Competitions Page - Tablet](https://github.com/MoeketsiNteo/Legends-Are-Made/blob/3c2364ea2cdf27189d8bb87b2fd5ea7746319d44/desktop-apply.png)
+![Competitions Page - Tablet](https://github.com/MoeketsiNteo/Legends-Are-Made/blob/ad06e44575d6820b9e86caaad715905805338e78/tablet-competitions.png)
 
 #### Apply
 
