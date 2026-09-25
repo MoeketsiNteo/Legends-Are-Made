@@ -131,7 +131,7 @@ The following screenshots show all website pages on a mobile device.
 
 #### Home
 
-![Home Page - Mobile](screenshots/mobile-home.png)
+![Home Page - Mobile](https://github.com/MoeketsiNteo/Legends-Are-Made/blob/94a7a28daaf753dda9f11df53f94fcc3d4632f50/mobile-home.png)
 
 #### Competitions
 
