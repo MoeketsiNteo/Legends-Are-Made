@@ -139,7 +139,7 @@ The following screenshots show all website pages on a mobile device.
 
 #### Apply
 
-![Apply Page - Mobile](screenshots/mobile-apply.png)
+![Apply Page - Mobile](https://github.com/MoeketsiNteo/Legends-Are-Made/blob/b0ac48f28ebfafdb7c58fa42f1b857a5c7cd4b24/mobile-apply.png)
 
 #### Gallery
 
