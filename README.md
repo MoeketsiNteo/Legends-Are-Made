@@ -106,7 +106,7 @@ The following screenshots show all website pages on a tablet device.
 
 #### Home
 
-![Home Page - Tablet](screenshots/tablet-home.png)
+![Home Page - Tablet](https://github.com/MoeketsiNteo/Legends-Are-Made/blob/1de42ff8c94c526a7c16065193e8fb58d34ce43d/tablet-home.png)
 
 #### Competitions
 
