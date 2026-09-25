@@ -122,7 +122,7 @@ The following screenshots show all website pages on a tablet device.
 
 #### Contact
 
-![Contact Page - Tablet](screenshots/tablet-contact.png)
+![Contact Page - Tablet](https://github.com/MoeketsiNteo/Legends-Are-Made/blob/6addb7fdbb5dce12ad36fc697d969650a8141bea/tablet-contact.png)
 
 
 ### Mobile
