@@ -135,7 +135,7 @@ The following screenshots show all website pages on a mobile device.
 
 #### Competitions
 
-![Competitions Page - Mobile](screenshots/mobile-competitions.png)
+![Competitions Page - Mobile](https://github.com/MoeketsiNteo/Legends-Are-Made/blob/8b9e7ab4769ed220f5d4677c2c16366000538b35/mobile-competitions.png)
 
 #### Apply
 
