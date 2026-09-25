@@ -1,199 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legends Are Made Dance Series</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<!--Makes the website responsive on different screen sizes-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--Page title shown in the browser tab-->
+<title>Legends Are Made Dance Series</title>
+<!--Links the HTML page to the CSS stylesheet-->
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- HEADER AND NAVIGATION -->
-    <header>
-        <nav>
-            <a href="home.html" class="logo">LEGENDS<span>///</span></a>
+<!---------------HEADER AND NAVIGATION------------------>
+<header>
+<nav>
+<!--Website logo-->
+<a href="home.html" class="logo">LEGENDS<span>///</span></a>
 
-            <div class="nav-links">
-                <a href="home.html">Home</a>
-                <a href="competitions.html">Competitions</a>
-                <a href="apply.html">Apply</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="contact.html">Contact</a>
-            </div>
-        </nav>
-    </header>
+<!--Hamburger menu button for tablet and mobile-->
+<input type="checkbox" id="menu-toggle">
 
-    <main>
+<label for="menu-toggle" class="hamburger">
+<span></span>
+<span></span>
+<span></span>
+</label>
 
-        <!-- HERO SECTION -->
-        <section class="hero">
-            <img src="images/hero.jpeg"
-                 alt="Legends Are Made Dance Series competition">
+<!--Main navigation links-->
+<div class="nav-links">
+<a href="home.html" class="active">Home</a>
+<a href="competitions.html">Competitions</a>
+<a href="apply.html">Apply</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
+</div>
+</nav>
+</header>
 
-            <div class="hero-overlay"></div>
+<main>
 
-            <div class="hero-content">
-                <p class="eyebrow">DANCE & PERFORMANCE SERIES</p>
+<!---------------------HERO SECTION----------------------->
+<section class="hero">
 
-                <h1>
-                    LEGENDS<br>
-                    <span>ARE MADE.</span>
-                </h1>
+<!--Main competition image-->
+<img src="images/hero.jpeg" alt="Legends Are Made Dance Series competition">
 
-                <p class="hero-text">
-                    Where talent takes the stage.
-                </p>
+<!--Dark overlay for better text visibility-->
+<div class="hero-overlay"></div>
 
-                <a href="apply.html" class="red-button">
-                    APPLY NOW
-                </a>
-            </div>
-        </section>
+<!--Main hero content-->
+<div class="hero-content">
+<p class="eyebrow">
+DANCE & PERFORMANCE SERIES
+</p>
 
-        <!-- ORGANISATION OVERVIEW -->
-        <section class="section">
+<h1>
+LEGENDS<br>
+<span>ARE MADE.</span>
+</h1>
 
-            <div class="section-title">
-                <h2>ABOUT <span>LEGENDS ARE MADE</span></h2>
-            </div>
+<p class="hero-text">
+Where talent takes the stage.
+</p>
 
-            <div class="content-grid">
+<!--Main call-to-action button-->
+<a href="apply.html" class="red-button">
+APPLY NOW
+</a>
+</div>
+</section>
 
-                <div>
-                    <p class="large-text">
-                        Legends Are Made Dance Series is a dance and
-                        entertainment competition that provides performers
-                        with an opportunity to showcase their talents.
-                    </p>
-                </div>
+<!--------------ORGANISATION OVERVIEW---------------->
+<section class="section">
+<div class="section-title">
+<h2>
+ABOUT <span>LEGENDS ARE MADE</span>
+</h2>
+</div>
 
-                <div>
-                    <p>
-                        The organisation hosts competitions covering
-                        different performance categories, including Latin
-                        and Ballroom dancing, Freestyle, Singing/Vocals
-                        and Performance Cheer.
-                    </p>
+<div class="content-grid">
+<div>
+<p class="large-text">
+Legends Are Made Dance Series is a dance and
+entertainment competition that provides performers
+with an opportunity to showcase their talents.
+</p>
+</div>
 
-                    <p>
-                        The competition brings together dancers, singers,
-                        performers, dance studios, teachers, judges,
-                        parents, families and spectators.
-                    </p>
-                </div>
+<div>
+<p>
+The organisation hosts competitions covering
+different performance categories, including Latin
+and Ballroom dancing, Freestyle, Singing/Vocals
+and Performance Cheer.
+</p>
 
-            </div>
-        </section>
+<p>
+The competition brings together dancers, singers,
+performers, dance studios, teachers, judges,
+parents, families and spectators.
+</p>
+</div>
+</div>
+</section>
 
-        <!-- MISSION AND VISION -->
-        <section class="mission-section">
+<!----------------MISSION AND VISION------------------>
+<section class="mission-section">
 
-            <div class="mission-box">
-                <h3>MISSION</h3>
+<!--Mission-->
+<div class="mission-box">
+<h3>MISSION</h3>
+<p>
+To provide performers with opportunities to showcase
+their talent and passion on stage.
+</p>
+</div>
 
-                <p>
-                    To provide performers with opportunities to showcase
-                    their talent and passion on stage.
-                </p>
-            </div>
+<!--Vision-->
+<div class="mission-box">
+<h3>VISION</h3>
+<p>
+To create an exciting and inclusive platform that
+celebrates performers and the performing arts community.
+</p>
+</div>
 
-            <div class="mission-box">
-                <h3>VISION</h3>
+</section>
 
-                <p>
-                    To create an exciting and inclusive platform that
-                    celebrates performers and the performing arts community.
-                </p>
-            </div>
+<!-----------------COMPETITION CATEGORIES------------------->
+<section class="section categories-section">
 
-        </section>
+<div class="section-title">
+<h2>
+COMPETITION <span>CATEGORIES</span>
+</h2>
+</div>
 
-        <!-- COMPETITION CATEGORIES -->
-        <section class="section categories-section">
+<!--Each card contains the image and information displayed over the image-->
+<div class="category-grid">
 
-            <div class="section-title">
-                <h2>COMPETITION <span>CATEGORIES</span></h2>
-            </div>
+<!--Latin-->
+<div class="category-card">
+<img src="images/latin.jpeg" alt="Latin dancing">
 
-            <div class="category-grid">
+<!--Information displayed over the image-->
+<div class="category-overlay">
+<h3>Latin</h3>
+<p>
+Energetic dance styles that focus on rhythm,
+movement and expressive performance.
+</p>
+</div>
+</div>
 
-                <div class="category-card">
-                    <img src="images/latin.jpeg" alt="Latin dancing">
-                    <div class="category-content">
-                        <h3>Latin</h3>
-                        <p>Latin dance performances.</p>
-                    </div>
-                </div>
+<!--Ballroom-->
+<div class="category-card">
+<img src="images/ballroom.jpeg" alt="Ballroom dancing">
 
-                <div class="category-card">
-                    <img src="images/ballroom.jpeg" alt="Ballroom dancing">
-                    <div class="category-content">
-                        <h3>Ballroom</h3>
-                        <p>Traditional and modern ballroom performances.</p>
-                    </div>
-                </div>
+<div class="category-overlay">
+<h3>Ballroom</h3>
+<p>
+Partner dancing that focuses on technique,
+movement, timing and presentation.
+</p>
+</div>
+</div>
 
-                <div class="category-card">
-                    <img src="images/freestyle.jpg" alt="Freestyle dancing">
-                    <div class="category-content">
-                        <h3>Freestyle</h3>
-                        <p>Creative freestyle performances.</p>
-                    </div>
-                </div>
+<!--Freestyle-->
+<div class="category-card">
+<img src="images/freestyle.jpg" alt="Freestyle dancing">
 
-                <div class="category-card">
-                    <img src="images/vocals.jpeg" alt="Singing and vocal performance">
-                    <div class="category-content">
-                        <h3>Singing / Vocals</h3>
-                        <p>Vocal and singing performances.</p>
-                    </div>
-                </div>
+<div class="category-overlay">
+<h3>Freestyle</h3>
+<p>
+Creative dance performances that allow
+performers to express their individual style.
+</p>
+</div>
+</div>
 
-                <div class="category-card">
-                    <img src="images/cheer.jpeg" alt="Performance cheer">
-                    <div class="category-content">
-                        <h3>Performing Cheer</h3>
-                        <p>Cheer, movement and performance routines.</p>
-                    </div>
-                </div>
+<!--Singing / Vocals-->
+<div class="category-card">
+<img src="images/vocals.jpeg" alt="Singing and vocal performance">
 
-            </div>
-        </section>
+<div class="category-overlay">
+<h3>Singing / Vocals</h3>
+<p>
+Vocal performances that showcase singing
+ability, expression and stage presence.
+</p>
+</div>
+</div>
 
-    </main>
+<!--Performing Cheer-->
+<div class="category-card">
+<img src="images/cheer.jpeg" alt="Performance cheer">
 
-    <!-- FOOTER -->
-    <footer>
+<div class="category-overlay">
+<h3>Performing Cheer</h3>
+<p>
+High-energy routines combining cheer,
+movement, performance and teamwork.
+</p>
+</div>
+</div>
 
-        <div class="footer-content">
+</div>
+</section>
 
-            <div>
-                <div class="footer-logo">
-                    LEGENDS<span>///</span>
-                </div>
+</main>
 
-                <p>
-                    Legends Are Made Dance Series
-                </p>
-            </div>
+<!-----------------FOOTER---------------------->
+<footer>
+<div class="footer-content">
 
-            <div class="footer-links">
-                <a href="home.html">Home</a>
-                <a href="competitions.html">Competitions</a>
-                <a href="apply.html">Apply</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="contact.html">Contact</a>
-            </div>
+<!--Footer organisation information-->
+<div>
+<div class="footer-logo">
+LEGENDS<span>///</span>
+</div>
 
-        </div>
+<p>
+Legends Are Made Dance Series
+</p>
+</div>
 
-        <div class="footer-bottom">
-            <p>&copy; 2026 Legends Are Made Dance Series</p>
-        </div>
+<!--Footer navigation-->
+<div class="footer-links">
+<a href="home.html">Home</a>
+<a href="competitions.html">Competitions</a>
+<a href="apply.html">Apply</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
+</div>
 
-    </footer>
+</div>
+
+<!--Copyright-->
+<div class="footer-bottom">
+<p>
+&copy; 2026 Legends Are Made Dance Series
+</p>
+</div>
+</footer>
 
 </body>
 </html>

@@ -1,166 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Legends Are Made</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<!--Makes the website responsive-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--Page title-->
+<title>Contact | Legends Are Made</title>
+<!--Links the CSS stylesheet-->
+<link rel="stylesheet" href="style.css">
+
+<!--Font Awesome icons-->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 
 <body>
 
-    <!-- HEADER AND NAVIGATION -->
-    <header>
-        <nav>
-            <a href="home.html" class="logo">LEGENDS<span>///</span></a>
+<!----------------HEADER AND NAVIGATION---------------->
+<header>
+<nav>
 
-            <div class="nav-links">
-                <a href="home.html">Home</a>
-                <a href="competitions.html">Competitions</a>
-                <a href="apply.html">Apply</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="contact.html">Contact</a>
-            </div>
-        </nav>
-    </header>
+<!--Website logo-->
+<a href="home.html" class="logo">
+LEGENDS<span>///</span>
+</a>
 
-    <main>
+<!--Hamburger menu button for tablet and mobile-->
+<input type="checkbox" id="menu-toggle">
 
-        <!-- PAGE INTRODUCTION -->
-        <section class="page-header">
-            <h1>CONTACT</h1>
+<label for="menu-toggle" class="hamburger">
+<span></span>
+<span></span>
+<span></span>
+</label>
 
-            <p>
-                Contact Legends Are Made Dance Series for
-                enquiries and more information.
-            </p>
-        </section>
+<div class="nav-links">
+<a href="home.html">Home</a>
+<a href="competitions.html">Competitions</a>
+<a href="apply.html">Apply</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html" class="active">Contact</a>
+</div>
 
-        <!-- CONTACT DETAILS -->
-        <section class="section">
+</nav>
+</header>
 
-            <div class="contact-grid">
+<main>
 
-                <div class="contact-information">
+<!--------------------PAGE INTRODUCTION-------------------->
+<section class="page-header">
 
-                    <h2>CONTACT <span>DETAILS</span></h2>
+<h1>CONTACT</h1>
 
-                    <div class="contact-detail">
-                        <h3>Email</h3>
+<p>
+Get in touch with Legends Are Made Dance Series.
+</p>
 
-                        <a href="mailto:legendsaremadecomp@gmail.com">
-                            legendsaremadecomp@gmail.com
-                        </a>
-                    </div>
+</section>
 
-                    <div class="contact-detail">
-                        <h3>Facebook</h3>
+<!---------------------CONTACT SECTION---------------------->
+<section class="section">
 
-                        <a href="https://www.facebook.com/share/18AZhLgrUn/?mibextid=wwXIfr"
-                           target="_blank">
-                            Facebook
-                        </a>
-                    </div>
+<div class="contact-grid">
 
-                    <div class="contact-detail">
-                        <h3>Instagram</h3>
+<!----------------CONTACT INFORMATION------------------>
+<div class="contact-information">
 
-                        <a href="https://www.instagram.com/legendsaremadedanceseries"
-                           target="_blank">
-                            @legendsaremadedanceseries
-                        </a>
-                    </div>
+<h2>
+CONTACT <span>DETAILS</span>
+</h2>
 
-                </div>
+<!--Email contact information-->
+<div class="contact-detail">
 
-                <!-- ENQUIRY FORM -->
-                <div class="form-container">
+<h3>Email</h3>
 
-                    <h2>MAKE AN <span>ENQUIRY</span></h2>
+<a href="mailto:legendsaremadecomp@gmail.com">
+<i class="fa-solid fa-envelope"></i>
+legendsaremadecomp@gmail.com
+</a>
 
-                    <form>
+</div>
 
-                        <div class="form-group">
-                            <label for="name">
-                                Name
-                            </label>
+<!--Facebook contact information-->
+<div class="contact-detail">
 
-                            <input type="text"
-                                   id="name"
-                                   name="name"
-                                   placeholder="Enter your name"
-                                   required>
-                        </div>
+<h3>Facebook</h3>
 
-                        <div class="form-group">
-                            <label for="contact-email">
-                                Email
-                            </label>
+<a
+href="https://www.facebook.com/share/18AZhLgrUn/?mibextid=wwXIfr"
+target="_blank"
+rel="noopener noreferrer">
 
-                            <input type="email"
-                                   id="contact-email"
-                                   name="contact-email"
-                                   placeholder="Enter your email address"
-                                   required>
-                        </div>
+<i class="fa-brands fa-facebook"></i>
+Facebook
 
-                        <div class="form-group">
-                            <label for="enquiry">
-                                Enquiry
-                            </label>
+</a>
 
-                            <textarea id="enquiry"
-                                      name="enquiry"
-                                      rows="7"
-                                      placeholder="Enter your enquiry"
-                                      required></textarea>
-                        </div>
+</div>
 
-                        <button type="submit">
-                            SEND ENQUIRY
-                        </button>
+<!--Instagram contact information-->
+<div class="contact-detail">
 
-                    </form>
+<h3>Instagram</h3>
 
-                </div>
+<a
+href="https://www.instagram.com/legendsaremadedanceseries"
+target="_blank"
+rel="noopener noreferrer">
 
-            </div>
+<i class="fa-brands fa-instagram"></i>
+@legendsaremadedanceseries
 
-        </section>
+</a>
 
-    </main>
+</div>
 
-    <!-- FOOTER -->
-    <footer>
+</div>
 
-        <div class="footer-content">
+<!-------------ENQUIRY FORM-------------->
+<div class="form-container">
 
-            <div>
-                <div class="footer-logo">
-                    LEGENDS<span>///</span>
-                </div>
+<h2>
+MAKE AN <span>ENQUIRY</span>
+</h2>
 
-                <p>
-                    Legends Are Made Dance Series
-                </p>
-            </div>
+<!--Form allows visitors to enter their enquiry details-->
+<form>
 
-            <div class="footer-links">
-                <a href="home.html">Home</a>
-                <a href="competitions.html">Competitions</a>
-                <a href="apply.html">Apply</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="contact.html">Contact</a>
-            </div>
+<!--Name field-->
+<div class="form-group">
 
-        </div>
+<label for="name">
+Name
+</label>
 
-        <div class="footer-bottom">
-            <p>&copy; 2026 Legends Are Made Dance Series</p>
-        </div>
+<input
+type="text"
+id="name"
+name="name"
+placeholder="Enter your name"
+required>
 
-    </footer>
+</div>
+
+<!--Email field-->
+<div class="form-group">
+
+<label for="contact-email">
+Email
+</label>
+
+<input
+type="email"
+id="contact-email"
+name="contact-email"
+placeholder="Enter your email address"
+required>
+
+</div>
+
+<!--Enquiry message field-->
+<div class="form-group">
+
+<label for="enquiry">
+Enquiry
+</label>
+
+<textarea
+id="enquiry"
+name="enquiry"
+rows="7"
+placeholder="Enter your enquiry"
+required></textarea>
+
+</div>
+
+<!--Button used to submit the enquiry form-->
+<button type="submit">
+SEND ENQUIRY
+</button>
+
+</form>
+
+</div>
+
+</div>
+</section>
+
+</main>
+
+<!--------------------------FOOTER----------------------------->
+<footer>
+
+<div class="footer-content">
+
+<!--Footer organisation information-->
+<div>
+
+<div class="footer-logo">
+LEGENDS<span>///</span>
+</div>
+
+<p>
+Legends Are Made Dance Series
+</p>
+
+</div>
+
+<!--Footer navigation links-->
+<div class="footer-links">
+<a href="home.html">Home</a>
+<a href="competitions.html">Competitions</a>
+<a href="apply.html">Apply</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
+</div>
+
+</div>
+
+<!--Copyright information-->
+<div class="footer-bottom">
+<p>
+&copy; 2026 Legends Are Made Dance Series
+</p>
+</div>
+
+</footer>
 
 </body>
 </html>
