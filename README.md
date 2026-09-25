@@ -73,48 +73,81 @@ The competition category cards include hover effects that display additional inf
 
 ## Responsive Design
 
-The website was developed to work across different screen sizes and devices.
+The website was developed to be responsive across different screen sizes and devices. The layout, navigation, images, forms and content adjust to provide a consistent user experience on desktop, tablet and mobile devices.
 
 ### Desktop
 
-The desktop layout displays the full navigation menu and multiple-column content sections.
+The following screenshots show all website pages on a desktop/laptop screen.
+
+#### Home
+
+![Home Page - Desktop](screenshots/desktop-home.png)
+
+#### Competitions
+
+![Competitions Page - Desktop](screenshots/desktop-competitions.png)
+
+#### Apply
+
+![Apply Page - Desktop](screenshots/desktop-apply.png)
+
+#### Gallery
+
+![Gallery Page - Desktop](screenshots/desktop-gallery.png)
+
+#### Contact
+
+![Contact Page - Desktop](screenshots/desktop-contact.png)
+
 
 ### Tablet
 
-The tablet layout adjusts the content into fewer columns and uses a hamburger menu for navigation.
+The following screenshots show all website pages on a tablet device.
+
+#### Home
+
+![Home Page - Tablet](screenshots/tablet-home.png)
+
+#### Competitions
+
+![Competitions Page - Tablet](screenshots/tablet-competitions.png)
+
+#### Apply
+
+![Apply Page - Tablet](screenshots/tablet-apply.png)
+
+#### Gallery
+
+![Gallery Page - Tablet](screenshots/tablet-gallery.png)
+
+#### Contact
+
+![Contact Page - Tablet](screenshots/tablet-contact.png)
+
 
 ### Mobile
 
-The mobile layout uses a single-column structure for most sections and a hamburger navigation menu to make the website easier to use on smaller screens.
+The following screenshots show all website pages on a mobile device.
 
+#### Home
 
-## Screenshot Evidence
+![Home Page - Mobile](screenshots/mobile-home.png)
 
-Screenshots are included as evidence of the responsive website design across different screen sizes and devices.
+#### Competitions
 
-### Desktop – Laptop
+![Competitions Page - Mobile](screenshots/mobile-competitions.png)
 
-![Desktop Laptop Screenshot](screenshots/laptop.png)
+#### Apply
 
-### Desktop – Large Screen
+![Apply Page - Mobile](screenshots/mobile-apply.png)
 
-![Desktop Screenshot](screenshots/desktop.png)
+#### Gallery
 
-### Tablet – iPad
+![Gallery Page - Mobile](screenshots/mobile-gallery.png)
 
-![iPad Screenshot](screenshots/ipad.png)
+#### Contact
 
-### Tablet
-
-![Tablet Screenshot](screenshots/tablet.png)
-
-### Mobile – iPhone
-
-![iPhone Screenshot](screenshots/iphone.png)
-
-### Mobile
-
-![Mobile Screenshot](screenshots/mobile.png)
+![Contact Page - Mobile](screenshots/mobile-contact.png)
 
 
 ## Timeline and Milestones
