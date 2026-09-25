@@ -41,16 +41,6 @@ The website was developed using HTML5 and CSS3 and includes responsive features 
 - **Consistent Visual Design** – A black, white and red colour scheme is used throughout the website.
 
 
-## Technologies Used
-
-- HTML5
-- CSS3
-- Font Awesome
-- Visual Studio Code
-- Git
-- GitHub
-
-
 ## Website Pages
 
 The website consists of five main pages:
@@ -147,7 +137,7 @@ The following screenshots show all website pages on a mobile device.
 
 #### Contact
 
-![Contact Page - Mobile](screenshots/mobile-contact.png)
+![Contact Page - Mobile](https://github.com/MoeketsiNteo/Legends-Are-Made/blob/278360d922c6c307f995245282ef919d435137d6/mobile-contact.png)
 
 
 ## Timeline and Milestones
