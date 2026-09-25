@@ -143,7 +143,7 @@ The following screenshots show all website pages on a mobile device.
 
 #### Gallery
 
-![Gallery Page - Mobile](screenshots/mobile-gallery.png)
+![Gallery Page - Mobile](https://github.com/MoeketsiNteo/Legends-Are-Made/blob/916a96720b3f948e49f61283c04e84c3e323570c/mobile-gallery.png)
 
 #### Contact
 
