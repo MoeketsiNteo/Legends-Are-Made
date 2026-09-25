@@ -89,7 +89,7 @@ The following screenshots show all website pages on a desktop/laptop screen.
 
 #### Apply
 
-![Apply Page - Desktop](screenshots/desktop-apply.png)
+![Apply Page - Desktop](https://github.com/MoeketsiNteo/Legends-Are-Made/blob/3c2364ea2cdf27189d8bb87b2fd5ea7746319d44/desktop-apply.png)
 
 #### Gallery
 
