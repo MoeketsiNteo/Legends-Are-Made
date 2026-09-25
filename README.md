@@ -114,7 +114,7 @@ The following screenshots show all website pages on a tablet device.
 
 #### Apply
 
-![Apply Page - Tablet](screenshots/tablet-apply.png)
+![Apply Page - Tablet](https://github.com/MoeketsiNteo/Legends-Are-Made/blob/c96ccb71b174c8880ae5f1227d9cfe8fe5bafceb/tablet-apply.png)
 
 #### Gallery
 
