@@ -81,7 +81,7 @@ The following screenshots show all website pages on a desktop/laptop screen.
 
 #### Home
 
-![Home Page - Desktop]([screenshots/desktop-home.png](https://github.com/MoeketsiNteo/Legends-Are-Made/blob/f463223cf1561bc74a6d0cc815f151cad6786819/desktop-home.png)
+![Home Page - Desktop](https://github.com/MoeketsiNteo/Legends-Are-Made/blob/f463223cf1561bc74a6d0cc815f151cad6786819/desktop-home.png)
 
 #### Competitions
 
