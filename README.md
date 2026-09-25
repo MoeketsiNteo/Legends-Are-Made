@@ -97,7 +97,7 @@ The following screenshots show all website pages on a desktop/laptop screen.
 
 #### Contact
 
-![Contact Page - Desktop](screenshots/desktop-contact.png)
+![Contact Page - Desktop](https://github.com/MoeketsiNteo/Legends-Are-Made/blob/8ab8a011c56df9fd710bf84c4cea8f74d174cfdb/desktop-contact.png)
 
 
 ### Tablet
