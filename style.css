@@ -273,79 +273,63 @@ button:hover {
     transition: 0.4s ease; /* Makes the blur, darkening and zoom effects happen smoothly.*/
 }
 
+
 /*------------------------CATEGORY NAME------------------------*/
 
-.category-name {
+/*Displays the category name at the bottom of the photo*/
+.category-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 18px 20px;
-    background: rgba(0, 0, 0, 0.75);
+    height: auto;
+    padding: 20px;
+    text-align: left;
     color: var(--white);
-    font-size: 21px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: 0.3s ease;
-}
-
-.category-name::before {
-    content: "";
-    display: block;
-    width: 35px;
-    height: 3px;
-    background-color: var(--red);
-    margin-bottom: 8px;
-}
-
-/*Contains the category name and explanation that appears when the user hovers over the image.
-   It is hidden before hovering*/
-.category-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 30px;
-    text-align: center;
-    color: var(--white);
-    background: rgba(0, 0, 0, 0.55);
-    opacity: 0; /*Keeps the information hidden until the card is hovered*/
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    opacity: 1;
     transition: 0.4s ease;
 }
 
-/*Styles the category name displayed inside the hover information*/
+/*Styles the category name*/
 .category-overlay h3 {
-    color: var(--red);
-    font-size: 26px;
-    margin-bottom: 12px;
+    color: var(--white);
+    font-size: 24px;
+    margin-bottom: 0;
     text-transform: uppercase;
+    transition: 0.4s ease;
 }
 
-/*Styles the category explanation displayed when hovering*/
+/*Keeps the description hidden before hovering*/
 .category-overlay p {
     color: var(--white);
     font-size: 15px;
     line-height: 1.6;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    margin: 0;
+    transition: 0.4s ease;
 }
 
-/*CATEGORY HOVER EFFECT*/
+/*Shows the description when hovering over the photo*/
+.category-card:hover .category-overlay p {
+    opacity: 1;
+    max-height: 120px;
+    margin-top: 10px;
+}
+
+/*Moves the category name slightly when hovering*/
+.category-card:hover .category-overlay h3 {
+    color: var(--red);
+}
+
+/*Darkens and zooms the photo when hovering*/
 .category-card:hover img {
-    filter: blur(3px) brightness(0.65);
+    filter: blur(2px) brightness(0.6);
     transform: scale(1.05);
 }
 
-/*Shows the category explanation when the card is hovered*/
-.category-card:hover .category-overlay {
-    opacity: 1;
-}
-
-.category-card:hover .category-name {
-    opacity: 0;
-}
 
 /* -----------------INTERNAL PAGE HEADER-------------------*/
 
@@ -779,3 +763,241 @@ footer {
     }
 
 }
+
+
+/* ---------------- GALLERY LIGHTBOX ---------------- */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.lightbox.show {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 35px;
+    padding: 5px 15px;
+}
+
+
+/* ---------------- FORM FEEDBACK ---------------- */
+
+.form-feedback {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.form-error {
+    color: #b00000;
+}
+
+.form-success {
+    color: #16723b;
+}
+
+
+/* ---------------- KEYBOARD ACCESSIBILITY ---------------- */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+.gallery-item img:focus-visible {
+    outline: 3px solid var(--red);
+    outline-offset: 3px;
+}
+
+
+/* ---------------- FORM REVIEW AND CONFIRMATION ---------------- */
+
+/* Hides the review and confirmation sections until needed */
+#application-review[hidden],
+#application-confirmation[hidden] {
+    display: none;
+}
+
+/* Space below the application introduction */
+.form-intro {
+    margin-bottom: 25px;
+}
+
+/* Styles the application review details */
+.review-details {
+    margin: 25px 0;
+}
+
+.review-details > div {
+    padding: 15px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.review-details dt {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.review-details dd {
+    overflow-wrap: anywhere;
+}
+
+/* Places the edit and confirm buttons next to each other */
+.review-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+/* Edit button uses the website's black colour */
+.edit-button {
+    background-color: var(--black);
+}
+
+.edit-button:hover {
+    background-color: var(--red);
+}
+
+/* Final confirmation message */
+.confirmation-message {
+    margin-top: 25px;
+    padding: 25px;
+    border-left: 4px solid var(--red);
+    background-color: var(--light-grey);
+}
+
+.confirmation-message h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.confirmation-message h2 span {
+    color: var(--red);
+}
+
+.confirmation-message p {
+    margin-bottom: 15px;
+}
+
+/* Styles form feedback messages */
+.form-feedback {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.form-error {
+    color: #b00000;
+}
+
+.form-success {
+    color: #176b35;
+}
+
+.required-note {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* Adds space below the gallery */
+.gallery-instruction {
+    margin-top: 25px;
+    text-align: center;
+}
+
+/* ---------------- GALLERY LIGHTBOX ---------------- */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(0, 0, 0, 0.92);
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.lightbox.show {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 35px;
+    padding: 5px 15px;
+}
+
+/* ---------------- KEYBOARD ACCESSIBILITY ---------------- */
+
+/* Makes it easier to see which element is selected */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+.gallery-item img:focus-visible {
+    outline: 3px solid var(--red);
+    outline-offset: 3px;
+}
+
+/* Keeps the review buttons neat on smaller screens */
+@media (max-width: 600px) {
+    .review-buttons {
+        flex-direction: column;
+    }
+
+    .review-buttons button {
+        width: 100%;
+    }
+
+    .lightbox img {
+        max-width: 100%;
+    }
+}
+
+/* Contact form feedback messages */
+.form-feedback {
+    margin-top: 15px;
+    padding: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.form-error {
+    color: var(--red);
+    border-left: 4px solid var(--red);
+}
+
+.form-success {
+    color: var(--black);
+    background-color: var(--light-grey);
+    border-left: 4px solid var(--red);
+}
+

@@ -1,270 +1,186 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<!--Makes the page responsive-->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--Page title-->
-<title>Competitions | Legends Are Made</title>
-<!--Links the CSS stylesheet-->
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title and SEO description -->
+    <title>Competitions | Legends Are Made</title>
+    <meta name="description" content="Explore Legends Are Made Dance Series competition categories, event details and competition rules.">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!---------------HEADER AND NAVIGATION--------------------->
+<!--HEADER AND NAVIGATION-->
 <header>
-<nav>
+    <nav>
+        <a href="home.html" class="logo">LEGENDS<span>///</span></a>
 
-<!--Website logo-->
-<a href="home.html" class="logo">
-LEGENDS<span>///</span>
-</a>
+        <input type="checkbox" id="menu-toggle">
 
-<!--Hamburger menu button for tablet and mobile-->
-<input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
 
-<label for="menu-toggle" class="hamburger">
-<span></span>
-<span></span>
-<span></span>
-</label>
-
-<!--Navigation menu-->
-<div class="nav-links">
-<a href="home.html">Home</a>
-<a href="competitions.html" class="active">Competitions</a>
-<a href="apply.html">Apply</a>
-<a href="gallery.html">Gallery</a>
-<a href="contact.html">Contact</a>
-</div>
-
-</nav>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="competitions.html" class="active">Competitions</a>
+            <a href="apply.html">Apply</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
 </header>
 
 <main>
 
-<!--------------------PAGE INTRODUCTION-------------------->
-<section class="page-header">
-<h1>COMPETITIONS</h1>
+    <!--PAGE INTRODUCTION-->
+    <section class="page-header">
+        <h1>COMPETITIONS</h1>
+        <p>Everything you need to know about the competition.</p>
+    </section>
 
-<p>
-Find information about Legends Are Made Dance Series
-competitions and categories.
-</p>
-</section>
+    <!--COMPETITION INFORMATION-->
+    <section class="section">
+        <div class="event-details">
 
-<!-----------------COMPETITION INFORMATION------------------>
-<section class="section">
+            <div class="event-item">
+                <h3>Competition</h3>
+                <p>Legends Are Made Dance Series</p>
+            </div>
 
-<div class="section-title">
-<h2>
-COMPETITION <span>INFORMATION</span>
-</h2>
-</div>
+            <div class="event-item">
+                <h3>Season</h3>
+                <p>Season 4</p>
+            </div>
 
-<!--Competition details-->
-<div class="event-details">
+            <div class="event-item">
+                <h3>Date</h3>
+                <p>To Be Confirmed</p>
+            </div>
 
-<div class="event-item">
-<h3>Competition</h3>
-<p>
-Legends Are Made Dance Series
-</p>
-</div>
+            <div class="event-item">
+                <h3>Venue</h3>
+                <p>To Be Confirmed</p>
+            </div>
 
-<div class="event-item">
-<h3>Season</h3>
-<p>
-Season 4
-</p>
-</div>
+        </div>
+    </section>
 
-<div class="event-item">
-<h3>Date</h3>
-<p>
-To Be Confirmed
-</p>
-</div>
+    <!--COMPETITION POSTER-->
+    <section class="poster-section">
+        <img src="images/poster.jpeg"
+             alt="Legends Are Made Dance Series competition poster">
+    </section>
 
-<div class="event-item">
-<h3>Venue</h3>
-<p>
-To Be Confirmed
-</p>
-</div>
+    <!--COMPETITION CATEGORIES-->
+    <section class="section dark-section">
+        <div class="section-title light-title">
+            <h2>COMPETITION <span>CATEGORIES</span></h2>
+            <p>Choose the category that best matches your performance.</p>
+        </div>
 
-</div>
-</section>
+        <div class="simple-category-list">
+            <div>
+                <h3>Latin</h3>
+                <p>Showcase rhythm, technique and expression through Latin dance.</p>
+            </div>
 
-<!-------------------COMPETITION POSTER------------------>
-<section class="poster-section">
-<img src="images/poster.jpeg"
-alt="Legends Are Made Dance Series competition poster">
-</section>
+            <div>
+                <h3>Ballroom</h3>
+                <p>Display elegance, control and partnership through ballroom dance.</p>
+            </div>
 
-<!-----------------COMPETITION CATEGORIES---------------->
-<section class="section dark-section">
+            <div>
+                <h3>Freestyle</h3>
+                <p>Present your individual style, creativity and energy.</p>
+            </div>
 
-<div class="section-title light-title">
-<h2>
-COMPETITION <span>CATEGORIES</span>
-</h2>
-</div>
+            <div>
+                <h3>Singing / Vocals</h3>
+                <p>Showcase your vocal ability and musical expression.</p>
+            </div>
 
-<div class="simple-category-list">
+            <div>
+                <h3>Performing Cheer</h3>
+                <p>Demonstrate teamwork, coordination and performance skills.</p>
+            </div>
+        </div>
+    </section>
 
-<!--Latin-->
-<div>
-<h3>Latin</h3>
-<p>
-Latin dance performances.
-</p>
-</div>
+    <!--COMPETITION RULES-->
+    <section class="section">
+        <div class="section-title">
+            <h2>COMPETITION <span>RULES</span></h2>
+            <p>Please review the rules before applying.</p>
+        </div>
 
-<!--Ballroom-->
-<div>
-<h3>Ballroom</h3>
-<p>
-Ballroom dance performances.
-</p>
-</div>
+        <div class="rules-list">
+            <div>
+                <h3>01</h3>
+                <p>Competitors must register before participating.</p>
+            </div>
 
-<!--Freestyle-->
-<div>
-<h3>Freestyle</h3>
-<p>
-Creative freestyle performances.
-</p>
-</div>
+            <div>
+                <h3>02</h3>
+                <p>Competitors must select the correct competition category.</p>
+            </div>
 
-<!--Singing-->
-<div>
-<h3>Singing / Vocals</h3>
-<p>
-Vocal and singing performances.
-</p>
-</div>
+            <div>
+                <h3>03</h3>
+                <p>Performers must follow the event organiser's instructions.</p>
+            </div>
 
-<!--Cheer-->
-<div>
-<h3>Performing Cheer</h3>
-<p>
-Cheer and performance routines.
-</p>
-</div>
+            <div>
+                <h3>04</h3>
+                <p>Performances must be suitable for the event and audience.</p>
+            </div>
 
-</div>
-</section>
+            <div>
+                <h3>05</h3>
+                <p>Competitors must show respect to judges, organisers and other performers.</p>
+            </div>
 
-<!----------------COMPETITION RULES------------------->
-<section class="section">
+            <div>
+                <h3>06</h3>
+                <p>Any additional event requirements will be communicated by the organisers.</p>
+            </div>
+        </div>
 
-<div class="section-title">
-<h2>
-COMPETITION <span>RULES</span>
-</h2>
-</div>
-
-<p class="rules-intro">
-The following are basic competition guidelines.
-Participants should follow any additional rules
-provided by the organisers before the event.
-</p>
-
-<!--Rules list-->
-<div class="rules-list">
-
-<div>
-<h3>01</h3>
-<p>
-Participants must register before the competition deadline.
-</p>
-</div>
-
-<div>
-<h3>02</h3>
-<p>
-Participants must compete in the correct category and age group.
-</p>
-</div>
-
-<div>
-<h3>03</h3>
-<p>
-Performances should follow the rules provided by the organisers.
-</p>
-</div>
-
-<div>
-<h3>04</h3>
-<p>
-Participants should arrive on time and be ready for their performance.
-</p>
-</div>
-
-<div>
-<h3>05</h3>
-<p>
-Respect must be shown to judges, organisers,
-performers and spectators.
-</p>
-</div>
-
-<div>
-<h3>06</h3>
-<p>
-The organisers may provide additional rules before the event.
-</p>
-</div>
-
-</div>
-
-<!--Link to application page-->
-<div class="center-button">
-<a href="apply.html" class="red-button">
-APPLY NOW
-</a>
-</div>
-
-</section>
+        <div class="center-button">
+            <a href="apply.html" class="red-button">APPLY NOW</a>
+        </div>
+    </section>
 
 </main>
 
-<!------------------FOOTER------------------->
+<!--FOOTER-->
 <footer>
+    <div class="footer-content">
+        <div>
+            <div class="footer-logo">LEGENDS<span>///</span></div>
+            <p>Legends Are Made Dance Series</p>
+        </div>
 
-<div class="footer-content">
+        <div class="footer-links">
+            <a href="home.html">Home</a>
+            <a href="competitions.html">Competitions</a>
+            <a href="apply.html">Apply</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
 
-<div>
-
-<div class="footer-logo">
-LEGENDS<span>///</span>
-</div>
-
-<p>
-Legends Are Made Dance Series
-</p>
-
-</div>
-
-<div class="footer-links">
-<a href="home.html">Home</a>
-<a href="competitions.html">Competitions</a>
-<a href="apply.html">Apply</a>
-<a href="gallery.html">Gallery</a>
-<a href="contact.html">Contact</a>
-</div>
-
-</div>
-
-<div class="footer-bottom">
-<p>
-&copy; 2026 Legends Are Made Dance Series
-</p>
-</div>
-
+    <div class="footer-bottom">
+        <p>&copy; 2026 Legends Are Made Dance Series</p>
+    </div>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
