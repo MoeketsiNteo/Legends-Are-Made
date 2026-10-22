@@ -213,4 +213,16 @@ The website has been developed using HTML5, CSS3 and JavaScript. The current imp
 
 The Apply page includes a review and confirmation process, while the Contact page provides front-end validation. Further testing and improvements can be completed as part of the final stage of the project.
 
+## References
+
+The following sources were consulted during the development of the Legends Are Made Dance Series website.
+
+- Mozilla Developer Network (MDN) (n.d.) *HTML: HyperText Markup Language*. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML
+- Mozilla Developer Network (MDN) (n.d.) *CSS: Cascading Style Sheets*. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS
+- Mozilla Developer Network (MDN) (n.d.) *JavaScript*. Available at: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+- W3Schools (n.d.) *HTML Tutorial*. Available at: https://www.w3schools.com/html/
+- W3Schools (n.d.) *CSS Tutorial*. Available at: https://www.w3schools.com/css/
+- W3Schools (n.d.) *JavaScript Tutorial*. Available at: https://www.w3schools.com/js/
+
+
 
