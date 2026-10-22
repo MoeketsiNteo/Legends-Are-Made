@@ -69,6 +69,21 @@ nav {
     color: var(--red);
 }
 
+/*Keep the header and navigation pinned at the top*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #000;
+}
+
+/*Keep the navigation content aligned*/
+header nav {
+    width: 100%;
+}
+
 /*----------------------NAVIGATION LINKS--------------------*/
 
 .nav-links {
