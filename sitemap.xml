@@ -1,26 +1,18 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
     <url>
         <loc>https://legends-are-made-dance-series.netlify.app/</loc>
     </url>
-
     <url>
-        <loc>https://legends-are-made-dance-series.netlify.app/competitions</loc>
+        <loc>https://legends-are-made-dance-series.netlify.app/competitions.html</loc>
     </url>
-
     <url>
-        <loc>https://legends-are-made-dance-series.netlify.app/apply</loc>
+        <loc>https://legends-are-made-dance-series.netlify.app/apply.html</loc>
     </url>
-
     <url>
-        <loc>https://legends-are-made-dance-series.netlify.app/gallery</loc>
+        <loc>https://legends-are-made-dance-series.netlify.app/gallery.html</loc>
     </url>
-
     <url>
-        <loc>https://legends-are-made-dance-series.netlify.app/contact</loc>
+        <loc>https://legends-are-made-dance-series.netlify.app/contact.html</loc>
     </url>
-
 </urlset>
