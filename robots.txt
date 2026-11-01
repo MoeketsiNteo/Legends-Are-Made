@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://legends-are-made-dance-series.netlify.app/sitemap.xml
