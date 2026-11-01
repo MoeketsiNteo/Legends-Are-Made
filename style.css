@@ -1177,3 +1177,212 @@ textarea:focus-visible,
     font-size: 40px;
     cursor: pointer;
 }
+
+
+/*---------------- APPLICATION FORM APPEARANCE ----------------*/
+
+/* Main application form container */
+#application-form {
+    background-color: var(--white);
+    padding: 35px;
+    border: 1px solid #dddddd;
+    border-top: 5px solid var(--red);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Application introduction */
+.form-intro {
+    color: var(--grey);
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+/* Registration sections */
+.registration-section {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #fafafa;
+    border: 1px solid #e5e5e5;
+    border-left: 4px solid var(--red);
+}
+
+/* Section headings */
+.registration-section h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* Form field spacing */
+.form-group {
+    margin-bottom: 22px;
+}
+
+/* Form labels */
+.form-group label {
+    font-size: 14px;
+    color: var(--black);
+}
+
+/* Form fields */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    min-height: 48px;
+    background-color: var(--white);
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    transition: 0.2s ease;
+}
+
+/* Textarea height */
+.form-group textarea {
+    min-height: 120px;
+}
+
+/* Field focus effect */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--red);
+    box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.10);
+}
+
+/* Category selection */
+.category-selection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 12px;
+}
+
+/* Individual category options */
+.category-selection label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    background-color: var(--white);
+    border: 1px solid #dddddd;
+    cursor: pointer;
+    font-weight: normal;
+    transition: 0.2s ease;
+}
+
+/* Checkbox sizing */
+.category-selection input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    min-height: auto;
+    accent-color: var(--red);
+}
+
+/* Category hover effect */
+.category-selection label:hover {
+    border-color: var(--red);
+}
+
+/* Competitor entries */
+.competitor-entry {
+    padding: 22px;
+    margin-bottom: 20px;
+    background-color: var(--white);
+    border: 1px solid #dddddd;
+    border-top: 3px solid var(--black);
+}
+
+/* Competitor headings */
+.competitor-entry h4 {
+    margin-bottom: 18px;
+    font-size: 18px;
+}
+
+/* Add competitor button */
+#add-competitor {
+    background-color: var(--black);
+    margin-bottom: 20px;
+}
+
+#add-competitor:hover {
+    background-color: var(--red);
+}
+
+/* Remove competitor button */
+.remove-competitor {
+    background-color: #555555;
+    padding: 10px 18px;
+    margin-top: 10px;
+}
+
+.remove-competitor:hover {
+    background-color: var(--red);
+}
+
+/* Review section */
+#application-review {
+    background-color: var(--white);
+    padding: 35px;
+    border-top: 5px solid var(--red);
+}
+
+/* Review heading */
+#application-review h2 {
+    margin-bottom: 15px;
+}
+
+/* Review details */
+.review-details > div {
+    padding: 18px;
+    background-color: #fafafa;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* Review labels */
+.review-details dt {
+    color: var(--red);
+}
+
+/* Confirmation section */
+#application-confirmation {
+    background-color: var(--white);
+    padding: 35px;
+    border-top: 5px solid var(--red);
+}
+
+/* Confirmation message */
+.confirmation-message {
+    margin-top: 20px;
+    padding: 25px;
+    background-color: #fafafa;
+}
+
+/* Required field note */
+.required-note {
+    color: var(--grey);
+    font-size: 13px;
+}
+
+/*------------------APPLICATION FORM MOBILE DESIGN----------------*/
+
+@media (max-width: 600px) {
+
+    #application-form,
+    #application-review,
+    #application-confirmation {
+        padding: 20px;
+    }
+
+    .registration-section {
+        padding: 18px;
+    }
+
+    .category-selection {
+        grid-template-columns: 1fr;
+    }
+
+    .competitor-entry {
+        padding: 15px;
+    }
+
+}
+

@@ -1,4 +1,5 @@
 
+
 /*----------------------APPLICATION FORM----------------------*/
 
 //Get the application form elements
@@ -6,81 +7,541 @@ const applicationForm = document.getElementById("application-form");
 const applicationReview = document.getElementById("application-review");
 const applicationConfirmation = document.getElementById("application-confirmation");
 
-// Only run this code on the application page
+//Only run this code on the application page
 if (applicationForm) {
 
-    //Get the review fields
-    const reviewName = document.getElementById("review-name");
-    const reviewEmail = document.getElementById("review-email");
-    const reviewPhone = document.getElementById("review-phone");
-    const reviewStudio = document.getElementById("review-studio");
-    const reviewCategory = document.getElementById("review-category");
-    const reviewAge = document.getElementById("review-age");
-    const reviewMessage = document.getElementById("review-message");
+    const registrationType = document.getElementById("registration-type");
 
-    //Get the application buttons
+    const individualSection = document.getElementById("individual-section");
+    const coupleSection = document.getElementById("couple-section");
+    const studioSection = document.getElementById("studio-section");
+
+    const competitorList = document.getElementById("competitor-list");
+    const addCompetitorButton = document.getElementById("add-competitor");
+
+    const reviewDetails = document.getElementById("review-details");
     const editApplication = document.getElementById("edit-details");
     const confirmApplication = document.getElementById("confirm-details");
     const newApplication = document.getElementById("new-application");
 
-    //Display the information when the form is submitted
-    applicationForm.addEventListener("submit", function (event) {
+
+    /*----------------------REGISTRATION TYPE----------------------*/
+
+    // Show the section selected by the applicant
+    function showRegistrationSection() {
+
+        const selectedType = registrationType.value;
+
+        individualSection.hidden = selectedType !== "Individual";
+        coupleSection.hidden = selectedType !== "Couple";
+        studioSection.hidden = selectedType !== "Studio / Group";
+
+        // Enable only the fields in the selected section
+        individualSection.querySelectorAll("input, select").forEach(function(field) {
+            field.disabled = selectedType !== "Individual";
+        });
+
+        coupleSection.querySelectorAll("input, select").forEach(function(field) {
+            field.disabled = selectedType !== "Couple";
+        });
+
+        studioSection.querySelectorAll("input, select, button").forEach(function(field) {
+            field.disabled = selectedType !== "Studio / Group";
+        });
+
+        // Clear category validation messages when changing sections
+        clearCategoryErrors();
+    }
+
+    registrationType.addEventListener("change", showRegistrationSection);
+
+    // Set the correct section when the page loads
+    showRegistrationSection();
+
+
+    /*----------------------STUDIO COMPETITORS----------------------*/
+
+    // Update competitor numbers
+    function updateCompetitorNumbers() {
+
+        const competitors = competitorList.querySelectorAll(".competitor-entry");
+
+        competitors.forEach(function(competitor, index) {
+
+            competitor.querySelector("h4").textContent =
+                "Competitor " + (index + 1);
+
+        });
+    }
+
+    // Add another competitor
+    addCompetitorButton.addEventListener("click", function() {
+
+        const firstCompetitor = competitorList.querySelector(".competitor-entry");
+
+        const newCompetitor = firstCompetitor.cloneNode(true);
+
+        // Clear all copied information
+        newCompetitor.querySelectorAll("input").forEach(function(field) {
+
+            if (field.type === "checkbox") {
+                field.checked = false;
+            } else {
+                field.value = "";
+            }
+
+            field.disabled = false;
+            field.setCustomValidity("");
+        });
+
+        newCompetitor.querySelectorAll("select").forEach(function(field) {
+            field.selectedIndex = 0;
+            field.disabled = false;
+        });
+
+        // Create a remove button
+        const removeButton = document.createElement("button");
+
+        removeButton.type = "button";
+        removeButton.className = "edit-button remove-competitor";
+        removeButton.textContent = "REMOVE COMPETITOR";
+
+        newCompetitor.appendChild(removeButton);
+
+        competitorList.appendChild(newCompetitor);
+
+        updateCompetitorNumbers();
+
+        newCompetitor.querySelector('input[type="text"]').focus();
+    });
+
+
+    // Remove a competitor when the button is clicked
+    competitorList.addEventListener("click", function(event) {
+
+        if (event.target.classList.contains("remove-competitor")) {
+
+            const competitors = competitorList.querySelectorAll(".competitor-entry");
+
+            // Always keep at least one competitor
+            if (competitors.length > 1) {
+
+                event.target.closest(".competitor-entry").remove();
+
+                updateCompetitorNumbers();
+            }
+        }
+    });
+
+
+    /*----------------------CATEGORY VALIDATION----------------------*/
+
+    // Clear category error messages
+    function clearCategoryErrors() {
+
+        applicationForm.querySelectorAll(
+            '.category-selection input[type="checkbox"]'
+        ).forEach(function(checkbox) {
+
+            checkbox.setCustomValidity("");
+        });
+    }
+
+
+    // Check that at least one category is selected
+    function validateCategories() {
+
+        clearCategoryErrors();
+
+        let categoryGroups = [];
+
+        if (registrationType.value === "Individual") {
+
+            categoryGroups.push(
+                individualSection.querySelectorAll(
+                    'input[name="individual-categories"]'
+                )
+            );
+
+        } else if (registrationType.value === "Couple") {
+
+            categoryGroups.push(
+                coupleSection.querySelectorAll(
+                    'input[name="couple-categories"]'
+                )
+            );
+
+        } else if (registrationType.value === "Studio / Group") {
+
+            const competitors = competitorList.querySelectorAll(".competitor-entry");
+
+            competitors.forEach(function(competitor) {
+
+                categoryGroups.push(
+                    competitor.querySelectorAll(
+                        'input[name="group-competitor-categories"]'
+                    )
+                );
+            });
+        }
+
+        let valid = true;
+
+        categoryGroups.forEach(function(group) {
+
+            const selected = Array.from(group).some(function(checkbox) {
+                return checkbox.checked;
+            });
+
+            if (!selected && group.length > 0) {
+
+                group[0].setCustomValidity(
+                    "Please select at least one competition category."
+                );
+
+                valid = false;
+            }
+        });
+
+        return valid;
+    }
+
+
+    // Clear category errors when a category is selected
+    applicationForm.addEventListener("change", function(event) {
+
+        if (event.target.type === "checkbox") {
+            validateCategories();
+        }
+    });
+
+
+    /*----------------------APPLICATION REVIEW----------------------*/
+
+    // Add information to the review section
+    function addReviewItem(title, value, parent) {
+
+        const row = document.createElement("div");
+        const heading = document.createElement("dt");
+        const information = document.createElement("dd");
+
+        heading.textContent = title;
+        information.textContent = value || "Not provided";
+
+        row.appendChild(heading);
+        row.appendChild(information);
+
+        parent.appendChild(row);
+    }
+
+
+    // Get selected competition categories
+    function getSelectedCategories(section, fieldName) {
+
+        const selected = section.querySelectorAll(
+            'input[name="' + fieldName + '"]:checked'
+        );
+
+        return Array.from(selected).map(function(checkbox) {
+            return checkbox.value;
+        }).join(", ") || "None selected";
+    }
+
+
+    // Display a heading in the review
+    function addReviewHeading(text) {
+
+        const heading = document.createElement("h3");
+
+        heading.textContent = text;
+
+        reviewDetails.appendChild(heading);
+    }
+
+
+    // Display the applicant's information
+    function displayApplicationReview() {
+
+        // Clear only the previous review, not the form
+        reviewDetails.replaceChildren();
+
+        const selectedType = registrationType.value;
+
+        addReviewHeading("REGISTRATION TYPE");
+        addReviewItem("Registration Type", selectedType, reviewDetails);
+
+
+        // INDIVIDUAL REGISTRATION
+        if (selectedType === "Individual") {
+
+            addReviewHeading("COMPETITOR DETAILS");
+
+            addReviewItem(
+                "Full Name",
+                document.getElementById("individual-name").value,
+                reviewDetails
+            );
+
+            addReviewItem(
+                "Email Address",
+                document.getElementById("individual-email").value,
+                reviewDetails
+            );
+
+            addReviewItem(
+                "Contact Number",
+                document.getElementById("individual-phone").value,
+                reviewDetails
+            );
+
+            addReviewItem(
+                "Dance Studio",
+                document.getElementById("individual-studio").value,
+                reviewDetails
+            );
+
+            addReviewItem(
+                "Age Group",
+                document.getElementById("individual-age").value,
+                reviewDetails
+            );
+
+            addReviewItem(
+                "Competition Categories",
+                getSelectedCategories(individualSection, "individual-categories"),
+                reviewDetails
+            );
+        }
+
+
+        // COUPLE REGISTRATION
+        else if (selectedType === "Couple") {
+
+            for (let i = 1; i <= 2; i++) {
+
+                const partner = i === 1 ? "one" : "two";
+
+                addReviewHeading("PARTNER " + i);
+
+                addReviewItem(
+                    "Full Name",
+                    document.getElementById("partner-" + partner + "-name").value,
+                    reviewDetails
+                );
+
+                addReviewItem(
+                    "Email Address",
+                    document.getElementById("partner-" + partner + "-email").value,
+                    reviewDetails
+                );
+
+                addReviewItem(
+                    "Contact Number",
+                    document.getElementById("partner-" + partner + "-phone").value,
+                    reviewDetails
+                );
+
+                addReviewItem(
+                    "Age Group",
+                    document.getElementById("partner-" + partner + "-age").value,
+                    reviewDetails
+                );
+            }
+
+            addReviewHeading("SHARED COMPETITION CATEGORIES");
+
+            addReviewItem(
+                "Categories",
+                getSelectedCategories(coupleSection, "couple-categories"),
+                reviewDetails
+            );
+        }
+
+
+        // STUDIO / GROUP REGISTRATION
+        else if (selectedType === "Studio / Group") {
+
+            addReviewHeading("STUDIO DETAILS");
+
+            addReviewItem(
+                "Studio Name",
+                document.getElementById("studio-name").value,
+                reviewDetails
+            );
+
+            addReviewItem(
+                "Representative",
+                document.getElementById("representative-name").value,
+                reviewDetails
+            );
+
+            addReviewItem(
+                "Email Address",
+                document.getElementById("representative-email").value,
+                reviewDetails
+            );
+
+            addReviewItem(
+                "Contact Number",
+                document.getElementById("representative-phone").value,
+                reviewDetails
+            );
+
+            addReviewHeading("COMPETITOR DETAILS");
+
+            const competitors = competitorList.querySelectorAll(".competitor-entry");
+
+            competitors.forEach(function(competitor, index) {
+
+                addReviewHeading("COMPETITOR " + (index + 1));
+
+                addReviewItem(
+                    "Full Name",
+                    competitor.querySelector('[name="group-competitor-name"]').value,
+                    reviewDetails
+                );
+
+                addReviewItem(
+                    "Email Address",
+                    competitor.querySelector('[name="group-competitor-email"]').value,
+                    reviewDetails
+                );
+
+                addReviewItem(
+                    "Contact Number",
+                    competitor.querySelector('[name="group-competitor-phone"]').value,
+                    reviewDetails
+                );
+
+                addReviewItem(
+                    "Age Group",
+                    competitor.querySelector('[name="group-competitor-age"]').value,
+                    reviewDetails
+                );
+
+                addReviewItem(
+                    "Competition Categories",
+                    getSelectedCategories(
+                        competitor,
+                        "group-competitor-categories"
+                    ),
+                    reviewDetails
+                );
+            });
+        }
+
+
+        // Additional information
+        addReviewHeading("ADDITIONAL INFORMATION");
+
+        addReviewItem(
+            "Message",
+            document.getElementById("message").value || "None",
+            reviewDetails
+        );
+    }
+
+
+    /*----------------------REVIEW BUTTON----------------------*/
+
+    applicationForm.addEventListener("submit", function(event) {
 
         event.preventDefault();
 
-        //Get the information entered by the applicant
-        const formData = new FormData(applicationForm);
+        // Check that a registration type has been selected
+        if (!registrationType.value) {
+            registrationType.reportValidity();
+            return;
+        }
 
-        // Display the information in the review section
-        reviewName.textContent = formData.get("competitor-name");
-        reviewEmail.textContent = formData.get("email");
-        reviewPhone.textContent = formData.get("contact-number");
-        reviewStudio.textContent = formData.get("dance-studio") || "Not provided";
-        reviewCategory.textContent = formData.get("category");
-        reviewAge.textContent = formData.get("age-group");
-        reviewMessage.textContent = formData.get("message") || "None";
+        // Check that a category has been selected
+        if (!validateCategories()) {
+            applicationForm.reportValidity();
+            return;
+        }
 
-        //Hide the form and show the review section
+        // Check all other required fields
+        if (!applicationForm.checkValidity()) {
+            applicationForm.reportValidity();
+            return;
+        }
+
+        // Display the review without resetting the form
+        displayApplicationReview();
+
         applicationForm.hidden = true;
         applicationReview.hidden = false;
 
         applicationReview.focus();
     });
 
-    //Allow the applicant to edit their details
-    if (editApplication) {
-        editApplication.addEventListener("click", function () {
 
-            applicationForm.hidden = false;
-            applicationReview.hidden = true;
+    /*----------------------EDIT DETAILS----------------------*/
 
-            applicationForm.querySelector("input").focus();
+    editApplication.addEventListener("click", function() {
+
+        // Return to the form with the original information intact
+        applicationReview.hidden = true;
+        applicationForm.hidden = false;
+
+        registrationType.focus();
+    });
+
+
+    /*----------------------CONFIRM DETAILS----------------------*/
+
+    confirmApplication.addEventListener("click", function() {
+
+        applicationReview.hidden = true;
+        applicationConfirmation.hidden = false;
+
+        applicationConfirmation.focus();
+    });
+
+
+    /*----------------------NEW APPLICATION----------------------*/
+
+    newApplication.addEventListener("click", function() {
+
+        // Reset the form when starting a completely new application
+        applicationForm.reset();
+
+        // Remove extra competitors
+        const competitors = competitorList.querySelectorAll(".competitor-entry");
+
+        competitors.forEach(function(competitor, index) {
+
+            if (index > 0) {
+                competitor.remove();
+            }
         });
-    }
 
-    //Confirm the application details
-    if (confirmApplication) {
-        confirmApplication.addEventListener("click", function () {
+        // Remove any remove button from the first competitor
+        const removeButton = competitorList.querySelector(".remove-competitor");
 
-            applicationReview.hidden = true;
-            applicationConfirmation.hidden = false;
+        if (removeButton) {
+            removeButton.remove();
+        }
 
-            applicationConfirmation.focus();
-        });
-    }
+        // Clear review and validation messages
+        reviewDetails.replaceChildren();
+        clearCategoryErrors();
 
-    //Allow the applicant to start a new application
-    if (newApplication) {
-        newApplication.addEventListener("click", function () {
+        // Show the form again
+        applicationForm.hidden = false;
+        applicationReview.hidden = true;
+        applicationConfirmation.hidden = true;
 
-            applicationForm.reset();
+        // Reset the registration sections
+        showRegistrationSection();
 
-            applicationForm.hidden = false;
-            applicationReview.hidden = true;
-            applicationConfirmation.hidden = true;
-        });
-    }
+        registrationType.focus();
+
+        updateCompetitorNumbers();
+    });
+
 }
+
 
 /*-----------------CONTACT FORM--------------------------------*/
 

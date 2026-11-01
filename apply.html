@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--Page title and SEO description-->
+    <!-- Page title and SEO description -->
     <title>Apply | Legends Are Made</title>
     <meta name="description" content="Apply to participate in Legends Are Made Dance Series in dance, vocals and performance categories.">
 
@@ -14,7 +13,7 @@
 
 <body>
 
-<!--HEADER AND NAVIGATION-->
+<!-- HEADER AND NAVIGATION -->
 <header>
     <nav>
         <a href="home.html" class="logo">LEGENDS<span>///</span></a>
@@ -39,86 +38,391 @@
 
 <main>
 
-    <!--PAGE INTRODUCTION-->
+    <!-- PAGE INTRODUCTION -->
     <section class="page-header">
         <h1>APPLY</h1>
         <p>Complete your application to take the stage.</p>
     </section>
 
-    <!--APPLICATION FORM-->
+    <!-- APPLICATION FORM -->
     <section class="form-section">
         <div class="form-container" id="application-container">
 
             <h2>APPLICATION <span>FORM</span></h2>
 
             <p class="form-intro">
-                Enter your details below
+                Choose your registration type and enter the required details.
             </p>
 
             <form id="application-form">
 
-                <!--Applicant name-->
+                <!-- REGISTRATION TYPE -->
                 <div class="form-group">
-                    <label for="competitor-name">Full Name *</label>
-                    <input type="text" id="competitor-name"
-                           name="competitor-name"
-                           placeholder="Enter your full name"
-                           autocomplete="name" required>
-                </div>
+                    <label for="registration-type">Registration Type *</label>
 
-                <!--Applicant email-->
-                <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email"
-                           placeholder="Enter your email address"
-                           autocomplete="email" required>
-                </div>
+                    <select id="registration-type"
+                            name="registration-type" required>
 
-                <!--Applicant contact number-->
-                <div class="form-group">
-                    <label for="contact-number">Contact Number *</label>
-                    <input type="tel" id="contact-number"
-                           name="contact-number"
-                           placeholder="Enter your contact number"
-                           autocomplete="tel"
-                           pattern="[0-9+() -]{7,20}"
-                           title="Enter a valid contact number."
-                           required>
-                </div>
+                        <option value="">Select registration type</option>
+                        <option value="Individual">Individual</option>
+                        <option value="Couple">Couple</option>
+                        <option value="Studio / Group">Studio / Group</option>
 
-                <!--Dance studio name-->
-                <div class="form-group">
-                    <label for="dance-studio">Dance Studio (if applicable)</label>
-                    <input type="text" id="dance-studio"
-                           name="dance-studio"
-                           placeholder="Enter your dance studio">
-                </div>
-
-                <!--Competition category-->
-                <div class="form-group">
-                    <label for="category">Competition Category *</label>
-                    <select id="category" name="category" required>
-                        <option value="">Select a category</option>
-                        <option value="Latin">Latin</option>
-                        <option value="Ballroom">Ballroom</option>
-                        <option value="Freestyle">Freestyle</option>
-                        <option value="Singing / Vocals">Singing / Vocals</option>
-                        <option value="Performing Cheer">Performing Cheer</option>
                     </select>
                 </div>
 
-                <!--Applicant age group-->
-                <div class="form-group">
-                    <label for="age-group">Age Group *</label>
-                    <select id="age-group" name="age-group" required>
-                        <option value="">Select your age group</option>
-                        <option value="Junior">Junior</option>
-                        <option value="Adult">Adult</option>
-                        <option value="Senior">Senior</option>
-                    </select>
-                </div>
 
-                <!--Additional information-->
+                <!-- INDIVIDUAL REGISTRATION -->
+                <section id="individual-section" class="registration-section">
+
+                    <h3>COMPETITOR DETAILS</h3>
+
+                    <div class="form-group">
+                        <label for="individual-name">Full Name *</label>
+                        <input type="text" id="individual-name"
+                               name="individual-name"
+                               placeholder="Enter your full name"
+                               autocomplete="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="individual-email">Email Address *</label>
+                        <input type="email" id="individual-email"
+                               name="individual-email"
+                               placeholder="Enter your email address"
+                               autocomplete="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="individual-phone">Contact Number *</label>
+                        <input type="tel" id="individual-phone"
+                               name="individual-phone"
+                               placeholder="Enter your contact number"
+                               pattern="[0-9+() -]{7,20}"
+                               title="Enter a valid contact number."
+                               autocomplete="tel" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="individual-studio">Dance Studio (if applicable)</label>
+                        <input type="text" id="individual-studio"
+                               name="individual-studio"
+                               placeholder="Enter your dance studio">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="individual-age">Age Group *</label>
+                        <select id="individual-age"
+                                name="individual-age" required>
+
+                            <option value="">Select age group</option>
+                            <option value="Junior">Junior</option>
+                            <option value="Adult">Adult</option>
+                            <option value="Senior">Senior</option>
+
+                        </select>
+                    </div>
+
+                    <!-- MULTIPLE CATEGORY SELECTION -->
+                    <fieldset class="form-group category-selection">
+                        <legend>Dance Categories *</legend>
+                        <p>Select all the categories you want to enter.</p>
+
+                        <label>
+                            <input type="checkbox" name="individual-categories"
+                                   value="Latin">
+                            Latin
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="individual-categories"
+                                   value="Ballroom">
+                            Ballroom
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="individual-categories"
+                                   value="Freestyle">
+                            Freestyle
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="individual-categories"
+                                   value="Singing / Vocals">
+                            Singing / Vocals
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="individual-categories"
+                                   value="Performing Cheer">
+                            Performing Cheer
+                        </label>
+                    </fieldset>
+
+                </section>
+
+
+                <!-- COUPLE REGISTRATION -->
+                <section id="couple-section"
+                         class="registration-section" hidden>
+
+                    <h3>COUPLE REGISTRATION</h3>
+
+                    <p>Enter the details of both partners below.</p>
+
+                    <!-- PARTNER 1 -->
+                    <h4>PARTNER 1</h4>
+
+                    <div class="form-group">
+                        <label for="partner-one-name">Full Name *</label>
+                        <input type="text" id="partner-one-name"
+                               name="partner-one-name"
+                               placeholder="Enter partner 1's full name"
+                               required disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="partner-one-email">Email Address *</label>
+                        <input type="email" id="partner-one-email"
+                               name="partner-one-email"
+                               placeholder="Enter partner 1's email"
+                               required disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="partner-one-phone">Contact Number *</label>
+                        <input type="tel" id="partner-one-phone"
+                               name="partner-one-phone"
+                               placeholder="Enter partner 1's contact number"
+                               pattern="[0-9+() -]{7,20}"
+                               required disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="partner-one-age">Age Group *</label>
+                        <select id="partner-one-age"
+                                name="partner-one-age" required disabled>
+
+                            <option value="">Select age group</option>
+                            <option value="Junior">Junior</option>
+                            <option value="Adult">Adult</option>
+                            <option value="Senior">Senior</option>
+
+                        </select>
+                    </div>
+
+                    <!-- PARTNER 2 -->
+                    <h4>PARTNER 2</h4>
+
+                    <div class="form-group">
+                        <label for="partner-two-name">Full Name *</label>
+                        <input type="text" id="partner-two-name"
+                               name="partner-two-name"
+                               placeholder="Enter partner 2's full name"
+                               required disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="partner-two-email">Email Address *</label>
+                        <input type="email" id="partner-two-email"
+                               name="partner-two-email"
+                               placeholder="Enter partner 2's email"
+                               required disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="partner-two-phone">Contact Number *</label>
+                        <input type="tel" id="partner-two-phone"
+                               name="partner-two-phone"
+                               placeholder="Enter partner 2's contact number"
+                               pattern="[0-9+() -]{7,20}"
+                               required disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="partner-two-age">Age Group *</label>
+                        <select id="partner-two-age"
+                                name="partner-two-age" required disabled>
+
+                            <option value="">Select age group</option>
+                            <option value="Junior">Junior</option>
+                            <option value="Adult">Adult</option>
+                            <option value="Senior">Senior</option>
+
+                        </select>
+                    </div>
+
+                    <!-- SHARED COUPLE CATEGORIES -->
+                    <fieldset class="form-group category-selection">
+                        <legend>Competition Categories *</legend>
+                        <p>Select the categories you are entering together.</p>
+
+                        <label>
+                            <input type="checkbox" name="couple-categories"
+                                   value="Latin" disabled>
+                            Latin
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="couple-categories"
+                                   value="Ballroom" disabled>
+                            Ballroom
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="couple-categories"
+                                   value="Freestyle" disabled>
+                            Freestyle
+                        </label>
+                    </fieldset>
+
+                </section>
+
+
+                <!-- STUDIO / GROUP REGISTRATION -->
+                <section id="studio-section"
+                         class="registration-section" hidden>
+
+                    <h3>STUDIO / GROUP REGISTRATION</h3>
+
+                    <p>Enter the studio details and add each competitor.</p>
+
+                    <!-- STUDIO CONTACT DETAILS -->
+                    <h4>STUDIO DETAILS</h4>
+
+                    <div class="form-group">
+                        <label for="studio-name">Studio Name *</label>
+                        <input type="text" id="studio-name"
+                               name="studio-name"
+                               placeholder="Enter studio name"
+                               required disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="representative-name">Representative's Full Name *</label>
+                        <input type="text" id="representative-name"
+                               name="representative-name"
+                               placeholder="Enter representative's name"
+                               required disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="representative-email">Email Address *</label>
+                        <input type="email" id="representative-email"
+                               name="representative-email"
+                               placeholder="Enter representative's email"
+                               required disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="representative-phone">Contact Number *</label>
+                        <input type="tel" id="representative-phone"
+                               name="representative-phone"
+                               placeholder="Enter representative's contact number"
+                               pattern="[0-9+() -]{7,20}"
+                               required disabled>
+                    </div>
+
+                    <!-- COMPETITOR LIST -->
+                    <h4>COMPETITOR DETAILS</h4>
+
+                    <div id="competitor-list">
+
+                        <!-- FIRST COMPETITOR -->
+                        <div class="competitor-entry">
+
+                            <h4>Competitor 1</h4>
+
+                            <div class="form-group">
+                                <label>Full Name *</label>
+                                <input type="text"
+                                       name="group-competitor-name"
+                                       placeholder="Enter competitor's full name"
+                                       required disabled>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Email Address *</label>
+                                <input type="email"
+                                       name="group-competitor-email"
+                                       placeholder="Enter competitor's email"
+                                       required disabled>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Contact Number *</label>
+                                <input type="tel"
+                                       name="group-competitor-phone"
+                                       placeholder="Enter contact number"
+                                       pattern="[0-9+() -]{7,20}"
+                                       required disabled>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Age Group *</label>
+                                <select name="group-competitor-age"
+                                        required disabled>
+
+                                    <option value="">Select age group</option>
+                                    <option value="Junior">Junior</option>
+                                    <option value="Adult">Adult</option>
+                                    <option value="Senior">Senior</option>
+
+                                </select>
+                            </div>
+
+                            <fieldset class="form-group category-selection">
+                                <legend>Dance Categories *</legend>
+
+                                <label>
+                                    <input type="checkbox"
+                                           name="group-competitor-categories"
+                                           value="Latin" disabled>
+                                    Latin
+                                </label>
+
+                                <label>
+                                    <input type="checkbox"
+                                           name="group-competitor-categories"
+                                           value="Ballroom" disabled>
+                                    Ballroom
+                                </label>
+
+                                <label>
+                                    <input type="checkbox"
+                                           name="group-competitor-categories"
+                                           value="Freestyle" disabled>
+                                    Freestyle
+                                </label>
+
+                                <label>
+                                    <input type="checkbox"
+                                           name="group-competitor-categories"
+                                           value="Singing / Vocals" disabled>
+                                    Singing / Vocals
+                                </label>
+
+                                <label>
+                                    <input type="checkbox"
+                                           name="group-competitor-categories"
+                                           value="Performing Cheer" disabled>
+                                    Performing Cheer
+                                </label>
+                            </fieldset>
+
+                        </div>
+
+                    </div>
+
+                    <button type="button" id="add-competitor"
+                            class="edit-button" disabled>
+                        + ADD ANOTHER COMPETITOR
+                    </button>
+
+                </section>
+
+
+                <!-- ADDITIONAL INFORMATION -->
                 <div class="form-group">
                     <label for="message">Additional Information (optional)</label>
                     <textarea id="message" name="message" rows="5"
@@ -128,86 +432,61 @@
                 <p class="required-note">* Required fields</p>
 
                 <button type="submit">REVIEW APPLICATION</button>
+
             </form>
 
-            <!--Application details review section-->
-            <section id="application-review" aria-labelledby="review-heading"
+
+            <!-- APPLICATION REVIEW SECTION -->
+            <section id="application-review"
+                     aria-labelledby="review-heading"
                      tabindex="-1" hidden>
 
                 <h2 id="review-heading">REVIEW YOUR <span>DETAILS</span></h2>
 
                 <p>Please check that the information below is correct.</p>
 
-                <dl class="review-details">
-                    <div>
-                        <dt>Full Name</dt>
-                        <dd id="review-name"></dd>
-                    </div>
-
-                    <div>
-                        <dt>Email Address</dt>
-                        <dd id="review-email"></dd>
-                    </div>
-
-                    <div>
-                        <dt>Contact Number</dt>
-                        <dd id="review-phone"></dd>
-                    </div>
-
-                    <div>
-                        <dt>Dance Studio</dt>
-                        <dd id="review-studio"></dd>
-                    </div>
-
-                    <div>
-                        <dt>Competition Category</dt>
-                        <dd id="review-category"></dd>
-                    </div>
-
-                    <div>
-                        <dt>Age Group</dt>
-                        <dd id="review-age"></dd>
-                    </div>
-
-                    <div>
-                        <dt>Additional Information</dt>
-                        <dd id="review-message"></dd>
-                    </div>
-                </dl>
+                <div id="review-details" class="review-details">
+                    <!-- JavaScript will display the registration details here. -->
+                </div>
 
                 <div class="review-buttons">
-                    <button type="button" id="edit-details" class="edit-button">
+
+                    <button type="button" id="edit-details"
+                            class="edit-button">
                         EDIT DETAILS
                     </button>
 
                     <button type="button" id="confirm-details">
                         CONFIRM DETAILS
                     </button>
+
                 </div>
 
                 <p id="review-feedback" class="form-feedback"
                    role="status" aria-live="polite"></p>
+
             </section>
 
-            <!--Final confirmation message-->
+
+            <!-- FINAL CONFIRMATION MESSAGE -->
             <section id="application-confirmation"
                      class="confirmation-message"
-                     tabindex="-1" aria-labelledby="confirmation-heading"
+                     tabindex="-1"
+                     aria-labelledby="confirmation-heading"
                      hidden>
 
-                <h2 id="confirmation-heading">THANK YOU FOR <span>CONFIRMING</span></h2>
+                <h2 id="confirmation-heading">
+                    THANK YOU FOR <span>CONFIRMING</span>
+                </h2>
 
                 <p>
-                    Your application details have been confirmed .
-                </p>
-
-                <p>
-                    Application Submittet successfully
+                    Your registration details have been confirmed.
                 </p>
 
                 <button type="button" id="new-application">
                     START A NEW APPLICATION
                 </button>
+
             </section>
 
         </div>
@@ -215,9 +494,11 @@
 
 </main>
 
-<!--FOOTER-->
+
+<!-- FOOTER -->
 <footer>
     <div class="footer-content">
+
         <div>
             <div class="footer-logo">LEGENDS<span>///</span></div>
             <p>Legends Are Made Dance Series</p>
@@ -230,6 +511,7 @@
             <a href="gallery.html">Gallery</a>
             <a href="contact.html">Contact</a>
         </div>
+
     </div>
 
     <div class="footer-bottom">
@@ -238,5 +520,6 @@
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
