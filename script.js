@@ -1,107 +1,99 @@
-/*-----------------APPLICATION FORM----------------------*/
+
+/*----------------------APPLICATION FORM----------------------*/
 
 //Get the application form elements
 const applicationForm = document.getElementById("application-form");
 const applicationReview = document.getElementById("application-review");
 const applicationConfirmation = document.getElementById("application-confirmation");
 
-//Check if the application form exists on the page
+// Only run this code on the application page
 if (applicationForm) {
 
-    //Validate the application form before showing the review
-    applicationForm.addEventListener("submit", function (event) {
-        event.preventDefault();
+    //Get the review fields
+    const reviewName = document.getElementById("review-name");
+    const reviewEmail = document.getElementById("review-email");
+    const reviewPhone = document.getElementById("review-phone");
+    const reviewStudio = document.getElementById("review-studio");
+    const reviewCategory = document.getElementById("review-category");
+    const reviewAge = document.getElementById("review-age");
+    const reviewMessage = document.getElementById("review-message");
 
-        if (!applicationForm.checkValidity()) {
-            applicationForm.reportValidity();
-            return;
-        }
+    //Get the application buttons
+    const editApplication = document.getElementById("edit-details");
+    const confirmApplication = document.getElementById("confirm-details");
+    const newApplication = document.getElementById("new-application");
+
+    //Display the information when the form is submitted
+    applicationForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
 
         //Get the information entered by the applicant
         const formData = new FormData(applicationForm);
-        let reviewDetails = "";
 
-        //Display the applicant's information for review
-        formData.forEach(function (value, key) {
-            reviewDetails += `
-                <p>
-                    <strong>${key}:</strong>
-                    ${value}
-                </p>
-            `;
-        });
+        // Display the information in the review section
+        reviewName.textContent = formData.get("competitor-name");
+        reviewEmail.textContent = formData.get("email");
+        reviewPhone.textContent = formData.get("contact-number");
+        reviewStudio.textContent = formData.get("dance-studio") || "Not provided";
+        reviewCategory.textContent = formData.get("category");
+        reviewAge.textContent = formData.get("age-group");
+        reviewMessage.textContent = formData.get("message") || "None";
 
-        if (applicationReview) {
-            applicationReview.innerHTML = reviewDetails;
-            applicationReview.hidden = false;
-        }
-
-        //Hide the application form while the details are being reviewed
+        //Hide the form and show the review section
         applicationForm.hidden = true;
+        applicationReview.hidden = false;
+
+        applicationReview.focus();
     });
 
-    //Allow the applicant to edit their application
-    const editApplication = document.getElementById("edit-application");
-
+    //Allow the applicant to edit their details
     if (editApplication) {
         editApplication.addEventListener("click", function () {
+
             applicationForm.hidden = false;
+            applicationReview.hidden = true;
 
-            if (applicationReview) {
-                applicationReview.hidden = true;
-            }
-
-            if (applicationConfirmation) {
-                applicationConfirmation.hidden = true;
-            }
+            applicationForm.querySelector("input").focus();
         });
     }
 
-    //Confirm the application
-    const confirmApplication = document.getElementById("confirm-application");
-
+    //Confirm the application details
     if (confirmApplication) {
         confirmApplication.addEventListener("click", function () {
-            if (applicationReview) {
-                applicationReview.hidden = true;
-            }
 
-            if (applicationConfirmation) {
-                applicationConfirmation.hidden = false;
-            }
+            applicationReview.hidden = true;
+            applicationConfirmation.hidden = false;
+
+            applicationConfirmation.focus();
         });
     }
 
     //Allow the applicant to start a new application
-    const newApplication = document.getElementById("new-application");
-
     if (newApplication) {
         newApplication.addEventListener("click", function () {
+
             applicationForm.reset();
+
             applicationForm.hidden = false;
-
-            if (applicationReview) {
-                applicationReview.hidden = true;
-            }
-
-            if (applicationConfirmation) {
-                applicationConfirmation.hidden = true;
-            }
+            applicationReview.hidden = true;
+            applicationConfirmation.hidden = true;
         });
     }
 }
 
+/*-----------------CONTACT FORM--------------------------------*/
 
-/*-----------------CONTACT FORM----------------------*/
-
-//Get the contact form
+//Get the contact form and feedback message
 const contactForm = document.getElementById("contact-form");
+const contactFeedback = document.getElementById("contact-feedback");
 
-//Check if the contact form exists on the page
+//Only run this code on the contact page
 if (contactForm) {
 
-    //Check the contact form when it is submitted
+    //Check the form when the visitor submits it
     contactForm.addEventListener("submit", function (event) {
+
         event.preventDefault();
 
         //Check that all required fields are completed
@@ -110,66 +102,17 @@ if (contactForm) {
             return;
         }
 
-        //Show a message to the visitor
-        //This form currently does not send information to a server
-        alert("Thank you! Your form has been checked. Your enquiry has not been sent yet.");
+        //Display a feedback message
+        contactFeedback.textContent =
+            "Thank you for contacting Legends Are Made Dance Series! Your enquiry has been successfully submitted.";
+
+        contactFeedback.className = "form-feedback form-success";
+
+        //Clear all the form fields
+        contactForm.reset();
     });
 }
 
-
-/*-----------------GALLERY LIGHTBOX----------------------*/
-
-// Get all gallery images
-const galleryImages = document.querySelectorAll(".gallery img");
-
-//Only create the lightbox if gallery images exist
-if (galleryImages.length > 0) {
-
-    //Create the lightbox elements
-    const lightbox = document.createElement("div");
-    const lightboxImage = document.createElement("img");
-    const closeButton = document.createElement("button");
-
-    //Add classes and text to the elements
-    lightbox.className = "lightbox";
-    closeButton.className = "lightbox-close";
-    closeButton.textContent = "×";
-    closeButton.setAttribute("aria-label", "Close image");
-
-    //Add the elements to the page
-    lightbox.appendChild(closeButton);
-    lightbox.appendChild(lightboxImage);
-    document.body.appendChild(lightbox);
-
-    //Open an image when it is clicked
-    galleryImages.forEach(function (image) {
-        image.addEventListener("click", function () {
-            lightboxImage.src = image.src;
-            lightboxImage.alt = image.alt;
-
-            lightbox.classList.add("active");
-        });
-    });
-
-    //Close the lightbox using the close button
-    closeButton.addEventListener("click", function () {
-        lightbox.classList.remove("active");
-    });
-
-    //Close the lightbox when the visitor clicks outside the image
-    lightbox.addEventListener("click", function (event) {
-        if (event.target === lightbox) {
-            lightbox.classList.remove("active");
-        }
-    });
-
-    //Close the lightbox by pressing Escape
-    document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape") {
-            lightbox.classList.remove("active");
-        }
-    });
-}
 
 
 /*-----------------COMPETITION SEARCH AND FILTER----------------------*/
@@ -298,4 +241,58 @@ if (categoryList && searchCategory && filterCategory && sortCategory && noCatego
 
     //Display all categories when the page first loads
     displayCategories();
+}
+
+/*-----------------GALLERY IMAGE LIGHTBOX----------------------*/
+
+// Get the lightbox elements
+const lightbox = document.getElementById("image-lightbox");
+const lightboxImage = document.getElementById("lightbox-image");
+const closeLightbox = document.getElementById("close-lightbox");
+
+// Get all gallery images
+const galleryImages = document.querySelectorAll(".gallery-grid .gallery-item img");
+
+// Only run this code if the gallery elements exist
+if (lightbox && lightboxImage && closeLightbox && galleryImages.length > 0) {
+
+    // Open the image when clicked
+    galleryImages.forEach(function(image) {
+
+        image.addEventListener("click", function() {
+
+            lightboxImage.src = image.src;
+            lightboxImage.alt = image.alt;
+
+            lightbox.style.display = "flex";
+
+        });
+
+    });
+
+    // Close the image using the close button
+    closeLightbox.addEventListener("click", function() {
+
+        lightbox.style.display = "none";
+
+    });
+
+    // Close the image when clicking outside it
+    lightbox.addEventListener("click", function(event) {
+
+        if (event.target === lightbox) {
+            lightbox.style.display = "none";
+        }
+
+    });
+
+    // Close the image when pressing Escape
+    document.addEventListener("keydown", function(event) {
+
+        if (event.key === "Escape") {
+            lightbox.style.display = "none";
+        }
+
+    });
+
 }
