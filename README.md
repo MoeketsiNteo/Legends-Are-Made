@@ -5,6 +5,9 @@
 **Student Name:** Moeketsi Nteo  
 **Student Number:** st10539789
 
+## Website Deployment link: 
+https://legends-are-made-dance-series.netlify.app
+
 ## Project Overview
 
 Legends Are Made Dance Series is a dance and entertainment competition that provides performers with an opportunity to showcase their talents. The organisation offers different performance categories, including Latin, Ballroom, Freestyle, Singing/Vocals and Performance Cheer.
@@ -87,13 +90,23 @@ The Legends Are Made Dance Series website consists of five main pages. Each page
 
 The Home page introduces visitors to the Legends Are Made Dance Series. It provides an overview of the organisation, its purpose and the opportunities available to dancers. It also acts as the main entry point to the website, allowing visitors to navigate to the other sections.
 
+**Figure 1: Home Page(Nteo; 2026)**
+![Home Page ](website_evidence_screenshots/home.png)
+
 ### 2. Competitions Page (`competitions.html`)
 
 The Competitions page provides information about the dance competitions offered by Legends Are Made. It allows visitors to explore the available competitions and understand the opportunities available to participants.
 
+**Figure 2: Competitions Page(Nteo; 2026)**
+![Home Page ](website_evidence_screenshots/competition.png)
+
+
 ### 3. Apply Page (`apply.html`)
 
 The Apply page allows individuals, couples and dance studios or groups to complete an application. The form displays different fields depending on the selected registration type. Users can enter their details, select competition categories, review their application, make changes if necessary, and confirm their information.
+
+**Figure 3: Apply Page(Nteo; 2026)**
+![Home Page ](website_evidence_screenshots/apply.png)
 
 ### Application Process
 
@@ -101,25 +114,38 @@ The Apply page allows individuals, couples and dance studios or groups to comple
 
 The user begins by selecting one of the available registration types: Individual, Couple, or Studio / Group. The selected option determines which information the user must provide.
 
+**Figure 4: Registration Type (Nteo;2026)**
+![Select Registartion Type](website_evidence_screenshots/apply-step1.png)
+
 **Step 2: Complete the Application Form**
 
 The user enters the required information based on their registration type. Individual registrations require one competitor's details, Couple registrations require details for both partners, and Studio / Group registrations require studio or group information and competitor details. Users can also select competition categories and provide additional information.
+
+**Figure 5: Application Form Completion (Nteo;2026)**
+![Complete the Application Form](website_evidence_screenshots/apply-step2.png)
 
 **Step 3: Review Application**
 
 After completing the form, the user clicks the *Review Application* button. The website displays a summary of the information entered so the user can check that their details are correct.
 
+**Figure 6: Review Application (Nteo;2026)**
+![Review the Application](website_evidence_screenshots/apply-step3.png)
+
 **Step 4: Edit or Confirm**
 
 If the information is incorrect, the user can return to the form and make changes. If the information is correct, the user can proceed by confirming the application.
 
+**Figure 7: Edit and Confirm (Nteo;2026)**
+![Edit or Confirm](website_evidence_screenshots/apply-step4.png)
+
 **Step 5: Application Confirmation**
 
 After confirming the application, the website displays a confirmation screen to indicate that the process has been completed.
-
-**Step 6: Finish**
-
 The user clicks the *Done* button to finish the process. The application interface also provides an option to start a new application, if required.
+
+**Figure 8: Confirmation Message (Nteo;2026)**
+![Application Confirmation](website_evidence_screenshots/apply-step5.png)
+
 
 **Note:** The application process operates on the front end. The confirmation screen does not mean that application details have been saved to a database or submitted to a server.
 
@@ -127,53 +153,37 @@ The user clicks the *Done* button to finish the process. The application interfa
 
 The Gallery page displays images related to the Legends Are Made Dance Series. Visitors can browse the images and select them to view an enlarged version using the lightbox functionality.
 
+**Figure 9: Gallery Page(Nteo; 2026)**
+![Home Page ](website_evidence_screenshots/gallery.png)
+
 ### 5. Contact Page (`contact.html`)
 
 The Contact page provides visitors with the organisation's contact information and an enquiry form to submit questions or requests.
 
 The form requires visitors to enter their name, email address, select an enquiry type and provide a message. HTML and JavaScript validation are used to check the information entered. Once all required fields are valid, a feedback message is displayed and the form is reset.
 
+**Figure 10: Contact Page(Nteo; 2026)**
+![Home Page ](website_evidence_screenshots/contact.png)
+
 **Contact Form Functionality**
 
 The following screenshots demonstrate the contact form and its validation:
 
-**Figure 1: Contact Form Before Submission**
+**Figure 11: Contact Form Before Submission (Nteo;2026)**
 
-![Contact Form Before Submission](website_evidence_screenshots/contact-form.png)
+![Contact Form Before Submission](website_evidence_screenshots/contact-step1.png)
 
-**Figure 2: Form Validation**
+**Figure 12: Form Validation (Nteo;2026)**
 
-![Contact Form Validation](website_evidence_screenshots/contact-validation.png)
+![Contact Form Validation](website_evidence_screenshots/contact-step2.png)
 
-**Figure 3: Successful Validation Feedback**
+**Figure 13: Successful Validation Feedback (Nteo;2026)**
 
-![Contact Form Feedback](website_evidence_screenshots/contact-feedback.png)
+![Contact Form Feedback](website_evidence_screenshots/contact-step3.png)
 
 **Note:** The form currently performs front-end validation only. It does not send enquiries to an email address or store them in a database.
 
-### Desktop
-
-The following screenshots show all website pages on a desktop/laptop screen.
-
-#### Home
-
-![Home Page - Desktop](website_evidence_screenshots/desktop-home.png)
-
-#### Competitions
-
-![Competitions Page - Desktop](website_evidence_screenshots/desktop-competitions.png)
-
-#### Apply
-
-![Apply Page - Desktop](website_evidence_screenshots/desktop-apply.png)
-
-#### Gallery
-
-![Gallery Page - Desktop](website_evidence_screenshots/desktop-gallery.png)
-
-#### Contact
-
-![Contact Page - Desktop](website_evidence_screenshots/desktop-contact.png)
+## Mobile Respnsive Edidence
 
 ### Tablet
 
@@ -181,22 +191,31 @@ The following screenshots show all website pages on a tablet device.
 
 #### Home
 
+**Figure 14: Tablet Home Page(Nteo;2026)**
 ![Home Page - Tablet](website_evidence_screenshots/tablet-home.png)
 
 #### Competitions
 
+**Figure 15: Tablet Competitions Page(Nteo;2026)**
+![Home Page - Tablet]
 ![Competitions Page - Tablet](website_evidence_screenshots/tablet-competitions.png)
 
 #### Apply
 
+**Figure 16: Tablet Apply Page(Nteo;2026)**
+![Home Page - Tablet]
 ![Apply Page - Tablet](website_evidence_screenshots/tablet-apply.png)
 
 #### Gallery
 
+**Figure 17: Tablet Gallery Page(Nteo;2026)**
+![Home Page - Tablet]
 ![Gallery Page - Tablet](website_evidence_screenshots/tablet-gallery.png)
 
 #### Contact
 
+**Figure 18: Tablet Contact Page(Nteo;2026)**
+![Home Page - Tablet]
 ![Contact Page - Tablet](website_evidence_screenshots/tablet-contact.png)
 
 ### Mobile
@@ -205,22 +224,28 @@ The following screenshots show all website pages on a mobile device.
 
 #### Home
 
+**Figure 19: Mobile Home Page(Nteo;2026)**
+![Home Page - Tablet]
 ![Home Page - Mobile](website_evidence_screenshots/mobile-home.png)
 
 #### Competitions
 
+**Figure 20: Mobile Competitions Page(Nteo;2026)**
 ![Competitions Page - Mobile](website_evidence_screenshots/mobile-competitions.png)
 
 #### Apply
 
+**Figure 21: Mobile Apply Page(Nteo;2026)**
 ![Apply Page - Mobile](website_evidence_screenshots/mobile-apply.png)
 
 #### Gallery
 
+**Figure 22: Mobile Gallery Page(Nteo;2026)**
 ![Gallery Page - Mobile](website_evidence_screenshots/mobile-gallery.png)
 
 #### Contact
 
+**Figure 23: Mobile Contact Page(Nteo;2026)**
 ![Contact Page - Mobile](website_evidence_screenshots/mobile-contact.png)
 
 ## Timeline and Milestones
@@ -276,6 +301,8 @@ Mozilla (n.d.-c) *JavaScript*. Available at: https://developer.mozilla.org/en-US
 Mozilla (n.d.-d) *HTMLFormElement: checkValidity() method*. Available at: https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/checkValidity (Accessed: 20 October 2026).
 
 Mozilla (n.d.-e) *HTMLFormElement: reportValidity() method*. Available at: https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reportValidity (Accessed:20 October 2026).
+
+Nteo, M. (2026). *Legends Are Made Dance Series Website* [Online website]. Available at: https://legends-are-made-dance-series.netlify.app/ (Accessed: 1 November 2026).
 
 W3Schools (n.d.-a) *HTML Tutorial*. Available at: https://www.w3schools.com/html/ (Accessed: 5 September 2026).
 
