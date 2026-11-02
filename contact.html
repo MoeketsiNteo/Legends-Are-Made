@@ -100,34 +100,50 @@
                 <div class="form-container">
 
                     <h2>MAKE AN <span>ENQUIRY</span></h2>
-
+                    
                     <!--Visitors can enter their enquiry details-->
                     <form id="contact-form">
-
                         <!--Name field-->
                         <div class="form-group">
                             <label for="name">Name*</label>
-                            <input type="text" id="name" name="name" placeholder= "Enter your name" required>
+                            <input type="text" id="name" name="name"
+                            placeholder="Enter your name"
+                            minlength="2" maxlength="50" required>
                         </div>
 
                         <!--Email field-->
                         <div class="form-group">
                             <label for="contact-email">Email*</label>
-                            <input type="email" id="contact-email" name="contact-email" placeholder="example@gmail.com" required>
+                            <input type="email" id="contact-email" name="contact-email"
+                            placeholder="example@gmail.com" required>
                         </div>
-
+                        
+                        <!--Enquiry type-->
+                        <div class="form-group">
+                            <label for="enquiry-type">Enquiry Type*</label>
+                            <select id="enquiry-type" name="enquiry-type" required>
+                                <option value="">Select an enquiry type</option>
+                                <option value="Competition Information">Competition Information</option>
+                                <option value="Registration">Registration</option>
+                                <option value="Sponsorship">Sponsorship</option>
+                                <option value="Volunteering">Volunteering</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
                         <!--Enquiry message field-->
                         <div class="form-group">
-                            <label for="enquiry">Enquiry*</label>
-                            <textarea id="enquiry" name="enquiry" rows="7" placeholder="Enter your enquiry" required></textarea>
+                            <label for="enquiry">Message*</label>
+                            <textarea id="enquiry" name="enquiry" rows="7"
+                            placeholder="Enter your enquiry"
+                            minlength="10" maxlength="1000" required></textarea>
                         </div>
-
-                        <!--Submit button-->
                         <button type="submit">SEND ENQUIRY</button>
-
+                        
                         <!--Form feedback message-->
-                        <p id="contact-feedback" class="form-feedback" role="status" aria-live="polite"></p>
-
+                        <p id="contact-feedback" class="form-feedback"
+                        role="status" aria-live="polite"></p>
+                    
                     </form>
                 </div>
             </div>

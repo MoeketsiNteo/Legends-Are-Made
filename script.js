@@ -1,5 +1,4 @@
 
-
 /*----------------------APPLICATION FORM----------------------*/
 
 //Get the application form elements
@@ -543,6 +542,7 @@ if (applicationForm) {
 }
 
 
+
 /*-----------------CONTACT FORM--------------------------------*/
 
 //Get the contact form and feedback message
@@ -557,15 +557,15 @@ if (contactForm) {
 
         event.preventDefault();
 
-        //Check that all required fields are completed
+        //Check that all required fields are completed correctly
         if (!contactForm.checkValidity()) {
             contactForm.reportValidity();
             return;
         }
 
-        //Display a feedback message
+        //Display a validation success message
         contactFeedback.textContent =
-            "Thank you for contacting Legends Are Made Dance Series! Your enquiry has been successfully submitted.";
+            "Thank you! Your enquiry details have been validated successfully.";
 
         contactFeedback.className = "form-feedback form-success";
 
@@ -573,7 +573,6 @@ if (contactForm) {
         contactForm.reset();
     });
 }
-
 
 
 /*-----------------COMPETITION SEARCH AND FILTER----------------------*/
