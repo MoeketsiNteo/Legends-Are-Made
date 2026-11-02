@@ -67,41 +67,6 @@ The competition category cards include hover effects that display additional inf
 
 JavaScript was added to make the website more interactive, particularly the Apply and Contact pages. The JavaScript code is contained in `script.js`. JavaScript event listeners and form validation methods are used to respond to user interactions and check form information (Mozilla, n.d.-c; Mozilla, n.d.-d; Mozilla, n.d.-e).
 
-### Apply Page
-
-The Apply page was improved by introducing a multi-step application process instead of displaying the entire process on a single screen.
-
-The process includes:
-
-- **Application Form:** Competitors enter their personal and competition details.
-- **Validation:** JavaScript checks whether the required fields have been completed correctly.
-- **Review Screen:** The entered information is displayed so competitors can check their details.
-- **Edit Option:** Competitors can return to the form and make corrections before confirming.
-- **Confirmation Screen:** A confirmation screen is displayed after the competitor confirms the application.
-- **New Application:** The form can be used again to start another application.
-
-The application process also supports different registration types, including individual, couple and studio/group applications. Competitors can add or remove competitor details where applicable.
-
-This makes the application process easier to follow and gives competitors an opportunity to check their information before confirmation.
-
-### Apply Page Flowchart
-
-The following flowchart illustrates the application process and its main decision points.
-
-*Note: The flowchart represents the website's front-end application process. The confirmation screen does not, by itself, mean that the application has been submitted to a server or stored in a database.*
-
-### Contact Page
-
-JavaScript was also added to the Contact page to improve form validation and user feedback.
-
-- Checks that the required fields are completed correctly.
-- Validates the email address using HTML form validation.
-- Checks the minimum and maximum character limits for applicable fields.
-- Displays a validation message when the details are incomplete or invalid.
-- Displays feedback after the details pass validation.
-- Clears the form fields after valid details have been checked.
-
-The contact form currently provides front-end validation and feedback. An email or server-side submission service is not connected, so the enquiry is not automatically sent.
 
 ## Gallery and Lightbox
 
@@ -109,32 +74,82 @@ The Gallery page displays photographs and event highlights from Legends Are Made
 
 A lightbox effect was implemented to allow visitors to view photographs in an enlarged display. The Elementor tutorial was consulted to understand how to implement lightbox functionality (Elementor, n.d.).
 
-## Home Page Content Structure
-
-The Home page introduces the organisation and provides an overview of its purpose and competition categories.
-
-The About section is part of the Home page rather than a separate page. It introduces Legends Are Made Dance Series, followed by the organisation's mission and vision and an overview of the available competition categories.
-
-The following diagram shows how the main content sections are organised on the Home page.
-
-```mermaid
-flowchart TD
-    A[Home Page] --> B[Hero Section]
-    B --> C[Organisation Overview]
-    C --> D[Mission and Vision]
-    D --> E[Competition Categories]
-    E --> F[Latin]
-    E --> G[Ballroom]
-    E --> H[Freestyle]
-    E --> I[Singing and Vocals]
-    E --> J[Performance Cheer]
-```
-
-This is a content structure diagram rather than a process flowchart because it shows the organisation of the page content.
 
 ## Responsive Design
 
 The website was developed to be responsive across different screen sizes and devices. The layout, navigation, images, forms and content adjust to provide a consistent user experience on desktop, tablet and mobile devices. Responsive CSS techniques and media queries were used to achieve this (Mozilla, n.d.-b).
+
+## Website Pages and Their Functionality
+
+The Legends Are Made Dance Series website consists of five main pages. Each page provides visitors with information or functionality to help them learn about the dance series and interact with the website.
+
+### 1. Home Page (`home.html`)
+
+The Home page introduces visitors to the Legends Are Made Dance Series. It provides an overview of the organisation, its purpose and the opportunities available to dancers. It also acts as the main entry point to the website, allowing visitors to navigate to the other sections.
+
+### 2. Competitions Page (`competitions.html`)
+
+The Competitions page provides information about the dance competitions offered by Legends Are Made. It allows visitors to explore the available competitions and understand the opportunities available to participants.
+
+### 3. Apply Page (`apply.html`)
+
+The Apply page allows individuals, couples and dance studios or groups to complete an application. The form displays different fields depending on the selected registration type. Users can enter their details, select competition categories, review their application, make changes if necessary, and confirm their information.
+
+### Application Process
+
+**Step 1: Select Registration Type**
+
+The user begins by selecting one of the available registration types: Individual, Couple, or Studio / Group. The selected option determines which information the user must provide.
+
+**Step 2: Complete the Application Form**
+
+The user enters the required information based on their registration type. Individual registrations require one competitor's details, Couple registrations require details for both partners, and Studio / Group registrations require studio or group information and competitor details. Users can also select competition categories and provide additional information.
+
+**Step 3: Review Application**
+
+After completing the form, the user clicks the *Review Application* button. The website displays a summary of the information entered so the user can check that their details are correct.
+
+**Step 4: Edit or Confirm**
+
+If the information is incorrect, the user can return to the form and make changes. If the information is correct, the user can proceed by confirming the application.
+
+**Step 5: Application Confirmation**
+
+After confirming the application, the website displays a confirmation screen to indicate that the process has been completed.
+
+**Step 6: Finish**
+
+The user clicks the *Done* button to finish the process. The application interface also provides an option to start a new application, if required.
+
+**Note:** The application process operates on the front end. The confirmation screen does not mean that application details have been saved to a database or submitted to a server.
+
+### 4. Gallery Page (`gallery.html`)
+
+The Gallery page displays images related to the Legends Are Made Dance Series. Visitors can browse the images and select them to view an enlarged version using the lightbox functionality.
+
+### 5. Contact Page (`contact.html`)
+
+The Contact page provides visitors with the organisation's contact information and an enquiry form to submit questions or requests.
+
+The form requires visitors to enter their name, email address, select an enquiry type and provide a message. HTML and JavaScript validation are used to check the information entered. Once all required fields are valid, a feedback message is displayed and the form is reset.
+
+**Contact Form Functionality**
+
+The following screenshots demonstrate the contact form and its validation:
+
+**Figure 1: Contact Form Before Submission**
+
+![Contact Form Before Submission](website_evidence_screenshots/contact-form.png)
+
+**Figure 2: Form Validation**
+
+![Contact Form Validation](website_evidence_screenshots/contact-validation.png)
+
+**Figure 3: Successful Validation Feedback**
+
+![Contact Form Feedback](website_evidence_screenshots/contact-feedback.png)
+
+**Note:** The form currently performs front-end validation only. It does not send enquiries to an email address or store them in a database.
 
 ### Desktop
 
@@ -248,7 +263,7 @@ The application and contact forms currently provide front-end functionality. The
 - Updated README screenshot paths to reflect the new folder structure.
 - Continued testing the website's functionality and responsiveness across desktop, tablet and mobile screen sizes.
 
-## References20
+## References
 
 Elementor (n.d.) *How to Add a Dynamic Lightbox to Your WordPress Website* [YouTube video]. Available at: https://youtu.be/80NLEjV2UNE (Accessed: 10 October  2026).
 
