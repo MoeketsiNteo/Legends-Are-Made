@@ -233,7 +233,7 @@ if (applicationForm) {
     }
 
 
-    // Get selected competition categories
+    //Get selected competition categories
     function getSelectedCategories(section, fieldName) {
 
         const selected = section.querySelectorAll(
@@ -246,7 +246,7 @@ if (applicationForm) {
     }
 
 
-    // Display a heading in the review
+    //Display a heading in the review
     function addReviewHeading(text) {
 
         const heading = document.createElement("h3");
@@ -257,10 +257,10 @@ if (applicationForm) {
     }
 
 
-    // Display the applicant's information
+    //Display the applicant's information
     function displayApplicationReview() {
 
-        // Clear only the previous review, not the form
+        //Clear only the previous review, not the form
         reviewDetails.replaceChildren();
 
         const selectedType = registrationType.value;
@@ -269,7 +269,7 @@ if (applicationForm) {
         addReviewItem("Registration Type", selectedType, reviewDetails);
 
 
-        // INDIVIDUAL REGISTRATION
+        //INDIVIDUAL REGISTRATION
         if (selectedType === "Individual") {
 
             addReviewHeading("COMPETITOR DETAILS");
@@ -312,7 +312,7 @@ if (applicationForm) {
         }
 
 
-        // COUPLE REGISTRATION
+        //COUPLE REGISTRATION
         else if (selectedType === "Couple") {
 
             for (let i = 1; i <= 2; i++) {
@@ -356,7 +356,7 @@ if (applicationForm) {
         }
 
 
-        // STUDIO / GROUP REGISTRATION
+        //STUDIO / GROUP REGISTRATION
         else if (selectedType === "Studio / Group") {
 
             addReviewHeading("STUDIO DETAILS");
@@ -429,7 +429,7 @@ if (applicationForm) {
         }
 
 
-        // Additional information
+        //Additional information
         addReviewHeading("ADDITIONAL INFORMATION");
 
         addReviewItem(
@@ -440,31 +440,31 @@ if (applicationForm) {
     }
 
 
-    /*----------------------REVIEW BUTTON----------------------*/
+    /*-------------------------REVIEW BUTTON----------------------*/
 
     applicationForm.addEventListener("submit", function(event) {
 
         event.preventDefault();
 
-        // Check that a registration type has been selected
+        //Check that a registration type has been selected
         if (!registrationType.value) {
             registrationType.reportValidity();
             return;
         }
 
-        // Check that a category has been selected
+        //Check that a category has been selected
         if (!validateCategories()) {
             applicationForm.reportValidity();
             return;
         }
 
-        // Check all other required fields
+        //Check all other required fields
         if (!applicationForm.checkValidity()) {
             applicationForm.reportValidity();
             return;
         }
 
-        // Display the review without resetting the form
+        //Display the review without resetting the form
         displayApplicationReview();
 
         applicationForm.hidden = true;
@@ -478,7 +478,7 @@ if (applicationForm) {
 
     editApplication.addEventListener("click", function() {
 
-        // Return to the form with the original information intact
+        //Return to the form with the original information intact
         applicationReview.hidden = true;
         applicationForm.hidden = false;
 
@@ -486,7 +486,7 @@ if (applicationForm) {
     });
 
 
-    /*----------------------CONFIRM DETAILS----------------------*/
+    /*----------------------------CONFIRM DETAILS----------------------*/
 
     confirmApplication.addEventListener("click", function() {
 
@@ -497,14 +497,14 @@ if (applicationForm) {
     });
 
 
-    /*----------------------NEW APPLICATION----------------------*/
+    /*----------------------NEW APPLICATION--------------------------*/
 
     newApplication.addEventListener("click", function() {
 
-        // Reset the form when starting a completely new application
+        //Reset the form when starting a completely new application
         applicationForm.reset();
 
-        // Remove extra competitors
+        //Remove extra competitors
         const competitors = competitorList.querySelectorAll(".competitor-entry");
 
         competitors.forEach(function(competitor, index) {
@@ -514,23 +514,23 @@ if (applicationForm) {
             }
         });
 
-        // Remove any remove button from the first competitor
+        //Remove any remove button from the first competitor
         const removeButton = competitorList.querySelector(".remove-competitor");
 
         if (removeButton) {
             removeButton.remove();
         }
 
-        // Clear review and validation messages
+        //Clear review and validation messages
         reviewDetails.replaceChildren();
         clearCategoryErrors();
 
-        // Show the form again
+        //Show the form again
         applicationForm.hidden = false;
         applicationReview.hidden = true;
         applicationConfirmation.hidden = true;
 
-        // Reset the registration sections
+        //Reset the registration sections
         showRegistrationSection();
 
         registrationType.focus();
