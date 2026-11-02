@@ -1,4 +1,3 @@
-
 /*----------------------APPLICATION FORM----------------------*/
 
 //Get the application form elements

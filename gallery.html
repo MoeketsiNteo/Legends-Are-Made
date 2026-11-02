@@ -1,169 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--Page title-->
-<title>Gallery | Legends Are Made</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!--Page title-->
+        <title>Gallery | Legends Are Made</title>
+        
+        <!--Meta description for search engines-->
+        <meta name="description" content="Explore the Legends Are Made Dance Series gallery and view moments from our dance competitions, performances and events.">
+        
+        <!--Links the CSS stylesheet-->
+        <link rel="stylesheet" href="assets/style.css">
 
-<!--Meta description for search engines-->
-<meta name="description" content="Explore the Legends Are Made Dance Series gallery and view moments from our dance competitions, performances and events.">
+        <!--Connects the JavaScript file -->
+        <script src="assets/script.js"></script>
+    
+    </head>
+    
+    <body>
+        
+        <!----------------HEADER AND NAVIGATION------------->
+        <header>
+            <nav>
+                <!--Website logo-->
+                <a href="home.html" class="logo">LEGENDS<span>///</span></a>
+                
+                <!--Hamburger menu button for tablet and mobile-->
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                
+                <div class="nav-links">
+                    <a href="home.html">Home</a>
+                    <a href="competitions.html">Competitions</a>
+                    <a href="apply.html">Apply</a>
+                    <a href="gallery.html" class="active">Gallery</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            
+            <!-------------PAGE INTRO------------------>
+            <section class="page-header">
+                <h1>GALLERY</h1>
+                <p>A collection of competition photos and event highlights.</p>
+            </section>
+            
+            <!----------------GALLERY--------------->
+            <section class="section">
+                <div class="gallery-grid">
 
-<!--Links the CSS stylesheet-->
-<link rel="stylesheet" href="style.css">
-
-
-</head>
-
-<body>
-
-<!----------------HEADER AND NAVIGATION------------->
-<header>
-<nav>
-
-<!--Website logo-->
-<a href="home.html" class="logo">
-LEGENDS<span>///</span>
-</a>
-
-<!--Hamburger menu button for tablet and mobile-->
-<input type="checkbox" id="menu-toggle">
-
-<label for="menu-toggle" class="hamburger">
-<span></span>
-<span></span>
-<span></span>
-</label>
-
-<div class="nav-links">
-<a href="home.html">Home</a>
-<a href="competitions.html">Competitions</a>
-<a href="apply.html">Apply</a>
-<a href="gallery.html" class="active">Gallery</a>
-<a href="contact.html">Contact</a>
-</div>
-
-</nav>
-</header>
-
-<main>
-
-<!-----------PAGE INTRO------------------>
-<section class="page-header">
-
-<h1>GALLERY</h1>
-
-<p>A collection of competition photos and event highlights.</p>
-
-</section>
-
-<!----------------GALLERY--------------->
-<section class="section">
-
-<div class="gallery-grid">
-
-<!--Competition photo-->
-<div class="gallery-item">
-<img
-src="images/freestyle_performance.jpeg"
-alt="Performer showcasing a freestyle dance routine">
-</div>
-
-<div class="gallery-item">
-<img
-src="images/freestyle_dance.jpeg"
-alt="Dancer performing fresstlye dance">
-</div>
-
-<div class="gallery-item">
-<img
-src="images/freestyle_dancer.jpeg"
-alt="Performer showcasing a freestyle dance routine">
-</div>
-
-<div class="gallery-item">
-<img
-src="images/ballroom_king_and_queen.jpeg"
-alt="King and Queen ob ballroom dance">
-</div>
-
-<div class="gallery-item">
-<img
-src="images/latin_king_and_queen.jpeg"
-alt="King and Queen ob latin dance">
-</div>
-
-<div class="gallery-item">
-<img
-src="images/rumba_performance.jpeg"
-alt="Dancer performing rumba dance">
-</div>
-
-<div class="gallery-item">
-<img
-src="images/banner.jpeg"
-alt="Legends are Made banner">
-</div>
-
-<div class="gallery-item">
-<img
-src="images/paso_doble.jpeg"
-alt="Dancer dancing yhe paso-doble">
-</div>
-
-<div class="gallery-item">
-<img
-src="images/stage.jpeg"
-alt="Legends are made stage">
-</div>
-
-</div>
-</section>
-
-</main>
-
-<!--------------------------FOOTER----------------------------->
-<footer>
-
-<div class="footer-content">
-
-<!--Footer organisation information-->
-<div>
-
-<div class="footer-logo">
-LEGENDS<span>///</span>
-</div>
-
-<p>Legends Are Made Dance Series</p>
-
-</div>
-
-<!--Footer navigation links-->
-<div class="footer-links">
-<a href="home.html">Home</a>
-<a href="competitions.html">Competitions</a>
-<a href="apply.html">Apply</a>
-<a href="gallery.html">Gallery</a>
-<a href="contact.html">Contact</a>
-</div>
-
-</div>
-
-<!--Copyright information-->
-<div class="footer-bottom">
-<p>&copy; 2026 Legends Are Made Dance Series</p>
-</div>
-
-</footer>
-
-<!-- Image Lightbox -->
-<div id="image-lightbox" class="lightbox">
-    <span id="close-lightbox" class="close-lightbox">&times;</span>
-    <img id="lightbox-image" src="" alt="Full-size gallery image">
-</div>
-
-<!--Connects the JavaScript file -->
-<script src="script.js"></script>
-
-</body>
+                    <!--Competition photo-->
+                    <div class="gallery-item"><img src="images/freestyle_performance.jpeg" alt="Performer showcasing a freestyle dance routine"></div>                   
+                    <div class="gallery-item"><img src="images/freestyle_dance.jpeg" alt="Dancer performing fresstlye dance"></div>
+                    <div class="gallery-item"><img src="images/freestyle_dancer.jpeg" alt="Performer showcasing a freestyle dance routine"></div>
+                    <div class="gallery-item"><img src="images/ballroom_king_and_queen.jpeg" alt="King and Queen ob ballroom dance"></div>
+                    <div class="gallery-item"><img src="images/latin_king_and_queen.jpeg" alt="King and Queen ob latin dance"></div>
+                    <div class="gallery-item"><img src="images/rumba_performance.jpeg" alt="Dancer performing rumba dance"></div>
+                    <div class="gallery-item"><img src="images/banner.jpeg" alt="Legends are Made banner"></div>
+                    <div class="gallery-item"><img src="images/paso_doble.jpeg" alt="Dancer dancing yhe paso-doble"></div>
+                    <div class="gallery-item"><img src="images/stage.jpeg" alt="Legends are made stage"></div>
+                
+                </div>
+            </section>
+        </main>
+        
+        <!--------------------------FOOTER----------------------------->
+        <footer>
+            <div class="footer-content">
+                
+                <!--Footer organisation information-->
+                <div>
+                    <div class="footer-logo">LEGENDS<span>///</span></div>
+                    <p>Legends Are Made Dance Series</p>
+                </div>
+                
+                <!--Footer navigation links-->
+                <div class="footer-links">
+                    <a href="home.html">Home</a>
+                    <a href="competitions.html">Competitions</a>
+                    <a href="apply.html">Apply</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            
+            </div>
+            
+            <!--Copyright information-->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Legends Are Made Dance Series</p>
+            </div>
+        
+        </footer>
+        
+        <!-- Image Lightbox -->
+         <div id="image-lightbox" class="lightbox">
+            <span id="close-lightbox" class="close-lightbox">&times;</span>
+            <img id="lightbox-image" src="" alt="Full-size gallery image">
+        </div>
+    
+    </body>
+    
 </html>

@@ -1,4 +1,4 @@
-/* Removing the default spacing added by browsers box-sizing makes width and height easier to control */
+/*Removing the default spacing added by browsers box-sizing makes width and height easier to control */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@
 }
 
 
-/*------------------WEBSITE COLOUR VARIABLES--------------------*/
+/*-----------------------WEBSITE COLOUR VARIABLES--------------------*/
 
 /*Stores the main website colours in variables.
    This makes it easier to keep the same colours
@@ -19,7 +19,7 @@
     --grey: #777777;
 }
 
-/*--------------------GENERAL PAGE STYLING--------------------*/
+/*-----------------------PAGE STYLING--------------------*/
 
 /*Sets the main font, text colour and background colour for the website*/
 body {
@@ -41,7 +41,7 @@ img {
     display: block;
 }
 
-/*----------------------HEADER-------------------------*/
+/*----------------------HEADER------------------------------*/
 header {
     background-color: var(--black);
     color: var(--white);
@@ -795,7 +795,7 @@ footer {
 
 }
 
-/* ---------------- FORM FEEDBACK ---------------- */
+/*---------------- FORM FEEDBACK ---------------- */
 
 .form-feedback {
     margin-top: 15px;
@@ -811,7 +811,7 @@ footer {
 }
 
 
-/* ---------------- KEYBOARD ACCESSIBILITY ---------------- */
+/*---------------- KEYBOARD ACCESSIBILITY ---------------- */
 
 a:focus-visible,
 button:focus-visible,
@@ -824,7 +824,7 @@ textarea:focus-visible,
 }
 
 
-/* ---------------- FORM REVIEW AND CONFIRMATION ---------------- */
+/*---------------- FORM REVIEW AND CONFIRMATION ---------------- */
 
 /* Hides the review and confirmation sections until needed */
 #application-review[hidden],
@@ -832,7 +832,7 @@ textarea:focus-visible,
     display: none;
 }
 
-/* Space below the application introduction */
+/*Space below the application introduction */
 .form-intro {
     margin-bottom: 25px;
 }
@@ -856,7 +856,7 @@ textarea:focus-visible,
     overflow-wrap: anywhere;
 }
 
-/* Places the edit and confirm buttons next to each other */
+/*Places the edit and confirm buttons next to each other */
 .review-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -873,7 +873,7 @@ textarea:focus-visible,
     background-color: var(--red);
 }
 
-/* Final confirmation message */
+/*Final confirmation message*/
 .confirmation-message {
     margin-top: 25px;
     padding: 25px;
@@ -894,7 +894,7 @@ textarea:focus-visible,
     margin-bottom: 15px;
 }
 
-/* Styles form feedback messages */
+/*Styles form feedback messages*/
 .form-feedback {
     margin-top: 15px;
     font-weight: bold;
@@ -913,13 +913,13 @@ textarea:focus-visible,
     font-size: 14px;
 }
 
-/* Adds space below the gallery */
+/*Adds space below the gallery */
 .gallery-instruction {
     margin-top: 25px;
     text-align: center;
 }
 
-/* ----------------KEYBOARD ACCESSIBILITY---------------- */
+/*----------------KEYBOARD ACCESSIBILITY----------------*/
 
 /*Makes it easier to see which element is selected*/
 a:focus-visible,
@@ -1179,9 +1179,9 @@ textarea:focus-visible,
 }
 
 
-/*---------------- APPLICATION FORM APPEARANCE ----------------*/
+/*----------------APPLICATION FORM APPEARANCE----------------*/
 
-/* Main application form container */
+/*Main application form container*/
 #application-form {
     background-color: var(--white);
     padding: 35px;
@@ -1190,14 +1190,14 @@ textarea:focus-visible,
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
-/* Application introduction */
+/*Application introduction*/
 .form-intro {
     color: var(--grey);
     margin-bottom: 30px;
     line-height: 1.7;
 }
 
-/* Registration sections */
+/*Registration sections*/
 .registration-section {
     margin-top: 30px;
     padding: 25px;
@@ -1206,24 +1206,24 @@ textarea:focus-visible,
     border-left: 4px solid var(--red);
 }
 
-/* Section headings */
+/*Section headings*/
 .registration-section h3 {
     font-size: 22px;
     margin-bottom: 20px;
 }
 
-/* Form field spacing */
+/*Form field spacing*/
 .form-group {
     margin-bottom: 22px;
 }
 
-/* Form labels */
+/*Form labels*/
 .form-group label {
     font-size: 14px;
     color: var(--black);
 }
 
-/* Form fields */
+/*Form fields*/
 .form-group input,
 .form-group select,
 .form-group textarea {
@@ -1234,12 +1234,12 @@ textarea:focus-visible,
     transition: 0.2s ease;
 }
 
-/* Textarea height */
+/*Textarea height*/
 .form-group textarea {
     min-height: 120px;
 }
 
-/* Field focus effect */
+/*Field focus effect*/
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
@@ -1248,7 +1248,7 @@ textarea:focus-visible,
     box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.10);
 }
 
-/* Category selection */
+/*Category selection*/
 .category-selection {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1256,7 +1256,7 @@ textarea:focus-visible,
     margin-top: 12px;
 }
 
-/* Individual category options */
+/*Individual category options*/
 .category-selection label {
     display: flex;
     align-items: center;
@@ -1269,7 +1269,7 @@ textarea:focus-visible,
     transition: 0.2s ease;
 }
 
-/* Checkbox sizing */
+/*Checkbox sizing*/
 .category-selection input[type="checkbox"] {
     width: 17px;
     height: 17px;
@@ -1277,12 +1277,12 @@ textarea:focus-visible,
     accent-color: var(--red);
 }
 
-/* Category hover effect */
+/*Category hover effect */
 .category-selection label:hover {
     border-color: var(--red);
 }
 
-/* Competitor entries */
+/* Competitor entries*/
 .competitor-entry {
     padding: 22px;
     margin-bottom: 20px;
@@ -1291,13 +1291,13 @@ textarea:focus-visible,
     border-top: 3px solid var(--black);
 }
 
-/* Competitor headings */
+/*Competitor headings*/
 .competitor-entry h4 {
     margin-bottom: 18px;
     font-size: 18px;
 }
 
-/* Add competitor button */
+/*Adding competitor button*/
 #add-competitor {
     background-color: var(--black);
     margin-bottom: 20px;
@@ -1307,7 +1307,7 @@ textarea:focus-visible,
     background-color: var(--red);
 }
 
-/* Remove competitor button */
+/*Removing competitor button*/
 .remove-competitor {
     background-color: #555555;
     padding: 10px 18px;
@@ -1318,54 +1318,53 @@ textarea:focus-visible,
     background-color: var(--red);
 }
 
-/* Review section */
+/*Review section*/
 #application-review {
     background-color: var(--white);
     padding: 35px;
     border-top: 5px solid var(--red);
 }
 
-/* Review heading */
+/*Review heading*/
 #application-review h2 {
     margin-bottom: 15px;
 }
 
-/* Review details */
+/*Review details*/
 .review-details > div {
     padding: 18px;
     background-color: #fafafa;
     border-bottom: 1px solid #e5e5e5;
 }
 
-/* Review labels */
+/*Review labels*/
 .review-details dt {
     color: var(--red);
 }
 
-/* Confirmation section */
+/*Confirmation section*/
 #application-confirmation {
     background-color: var(--white);
     padding: 35px;
     border-top: 5px solid var(--red);
 }
 
-/* Confirmation message */
+/*Confirmation message*/
 .confirmation-message {
     margin-top: 20px;
     padding: 25px;
     background-color: #fafafa;
 }
 
-/* Required field note */
+/*Required field note*/
 .required-note {
     color: var(--grey);
     font-size: 13px;
 }
 
-/*------------------APPLICATION FORM MOBILE DESIGN----------------*/
+/*------------------------APPLICATION FORM MOBILE DESIGN----------------*/
 
 @media (max-width: 600px) {
-
     #application-form,
     #application-review,
     #application-confirmation {
@@ -1383,6 +1382,5 @@ textarea:focus-visible,
     .competitor-entry {
         padding: 15px;
     }
-
 }
 
