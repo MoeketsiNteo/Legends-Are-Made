@@ -127,22 +127,18 @@ The website was developed to be responsive across different screen sizes and dev
 
 ## Changelog
 
-### Part 2
-- Developed the main website pages using HTML5 and CSS3.
-- Created a consistent visual design using black, white and red.
-- Added responsive layouts for desktop, tablet and mobile devices.
+### Part 2 – Feedback Improvements
+- Added a reference list to address the lecturer's feedback that references were missing.
+- Retained the existing responsive layout, consistent colour palette, typography and styling across the website.
+- Maintained the use of CSS Flexbox, hover transitions, form focus states and responsive media queries.
 
-### Part 3
-- Added JavaScript functionality to improve website interaction.
-- Developed a multi-step application process with conditional fields, validation, a review screen, editing and confirmation.
-- Added functionality to allow competitors to add and remove competitor details for group applications.
-- Improved the Contact page with required-field validation and user feedback.
-- Added an enquiry type selection to the Contact form.
-- Improved form validation using HTML5 and JavaScript.
-- Tested website functionality and responsive layouts.
-- Updated website SEO elements, including the sitemap and robots.txt file.
-- Organised project files and documentation within the GitHub repository.
-
+### Part 3 – Development Updates
+- Added JavaScript functionality to the Apply page, including conditional application sections, form validation, competitor management, application review, editing and confirmation.
+- Improved the Contact page with required-field validation and user feedback messages.
+- Added an enquiry type selection and minimum and maximum character limits to the contact form.
+- Added validation messages to help users identify incomplete or invalid information.
+- Organised project screenshots into the `website_evidence_screenshots` folder and updated their paths in the README.
+- Continued testing the website's functionality and responsiveness across desktop, tablet and mobile screen sizes.
 
 ### Desktop
 
