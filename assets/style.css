@@ -970,8 +970,10 @@ textarea:focus-visible,
 
 /*Category results container*/
 #category-list {
+    width: 100%;
+    max-width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 25px;
     margin-top: 40px;
 }
@@ -1088,63 +1090,188 @@ textarea:focus-visible,
     font-size: 15px;
 }
 
+/*-------------------COMPETITION RESPONSIVE DESIGN----------------------*/
 
-/*-----------------TABLET RESPONSIVE DESIGN----------------------*/
+/*Tablet*/
+@media (max-width: 768px) {
 
-@media screen and (max-width: 768px) {
-
-    /*Changes the category cards to two columns*/
     #category-list {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    /*Adjusts the search controls*/
     .competition-search {
         grid-template-columns: 1fr 1fr;
-        gap: 18px;
     }
 
-    /*Makes the search field fill the first row*/
     .competition-search > div:first-child {
         grid-column: 1 / -1;
     }
+
 }
 
+@media (max-width: 600px) {
 
-/*-----------------MOBILE RESPONSIVE DESIGN----------------------*/
-
-@media screen and (max-width: 500px) {
-
-    /*Displays one category card per row*/
     #category-list {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         gap: 15px;
-        margin-top: 30px;
     }
 
-    /*Adjusts category card spacing */
     #category-list .event-item {
+        width: 100%;
+        min-width: 0;
         padding: 20px;
+        overflow-wrap: anywhere;
     }
 
-    /*Stacks the search controls*/
     .competition-search {
-        grid-template-columns: 1fr;
-        padding: 20px;
-        gap: 18px;
-        margin: 25px auto 0;
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        padding: 18px;
     }
 
-    /*Resets the search field position*/
     .competition-search > div:first-child {
         grid-column: auto;
     }
 
-    /*Adjusts input height*/
     .competition-search input,
     .competition-search select {
-        height: 46px;
+        width: 100%;
+        min-width: 0;
     }
+
+}
+
+/*Mobile*/
+@media screen and (max-width: 600px) {
+
+    /* Main page sections */
+    .section {
+        width: 100%;
+        padding: 45px 16px;
+    }
+
+    /* Competition heading */
+    .page-header {
+        padding: 30px 15px;
+    }
+
+    .page-header h1 {
+        font-size: 36px;
+        overflow-wrap: break-word;
+    }
+
+    .page-header p {
+        font-size: 15px;
+    }
+
+    /* Competition information */
+    .event-details {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    /* Poster */
+    .poster-section {
+        padding: 25px 15px;
+    }
+
+    .poster-section img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* Competition category heading */
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .section-title p {
+        font-size: 14px;
+    }
+
+    /* Search, filter and sort */
+    .competition-search {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .competition-search > div {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .competition-search input,
+    .competition-search select {
+        width: 100%;
+        min-width: 0;
+        font-size: 14px;
+    }
+
+    /* Category cards */
+    #category-list {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        gap: 15px;
+    }
+
+    #category-list .event-item {
+        width: 100%;
+        min-width: 0;
+        padding: 18px;
+        overflow-wrap: break-word;
+    }
+
+    #category-list .event-item p {
+        overflow-wrap: anywhere;
+    }
+
+    /* Competition rules */
+    .rules-list {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    /* Apply button */
+    .center-button .red-button {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Footer */
+    .footer-content {
+        padding: 35px 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+/* Extra small mobile screens */
+@media screen and (max-width: 380px) {
+
+    .page-header h1 {
+        font-size: 30px;
+    }
+
+    .section-title h2 {
+        font-size: 26px;
+    }
+
+    .competition-search {
+        padding: 12px;
+    }
+
 }
 
 /*-----------------GALLERY LIGHTBOX----------------------*/
@@ -1383,4 +1510,5 @@ textarea:focus-visible,
         padding: 15px;
     }
 }
+
 
