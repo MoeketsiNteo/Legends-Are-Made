@@ -11,7 +11,7 @@ Legends Are Made Dance Series is a dance and entertainment competition that prov
 
 The purpose of this project is to develop a professional website that provides a central platform for competition information, competitor applications, event photographs and contact information.
 
-The website was developed using HTML5, CSS3 and JavaScript. It includes responsive features for desktop, tablet and mobile devices, as well as interactive elements that improve the user experience.
+The website was developed using HTML5, CSS3 and JavaScript. HTML provides the structure of the website, CSS is used for styling and responsive layouts, and JavaScript adds interactive functionality (Mozilla, n.d.-a; Mozilla, n.d.-b; Mozilla, n.d.-c).
 
 ## Website Goals and Objectives
 
@@ -29,7 +29,7 @@ The website was developed using HTML5, CSS3 and JavaScript. It includes responsi
 - **Home** – Organisation overview, mission, vision and competition categories.
 - **Competitions** – Competition information, categories, rules and an Apply Now option.
 - **Apply** – Multi-step application form that allows competitors to enter their details, review their information, edit their application and confirm it.
-- **Gallery** – Competition photographs and event highlights.
+- **Gallery** – Competition photographs and event highlights displayed using a lightbox effect.
 - **Contact** – Contact details, social media links and an enquiry form with validation and feedback.
 - **Responsive Design** – The website adapts to different screen sizes.
 - **Mobile Navigation** – A hamburger menu is used on tablet and mobile screen sizes.
@@ -42,6 +42,7 @@ The website was developed using HTML5, CSS3 and JavaScript. It includes responsi
 - **Application Confirmation** – A confirmation screen is displayed after the competitor confirms the application.
 - **Contact Form Feedback** – Feedback messages inform users whether the enquiry details have passed validation.
 - **Form Reset** – The contact form fields are cleared after valid details have been checked.
+- **Lightbox Gallery** – Visitors can view gallery photographs in an enlarged display.
 - **Consistent Visual Design** – A black, white and red colour scheme is used throughout the website.
 
 ## Website Pages
@@ -58,13 +59,13 @@ The website consists of five main pages:
 
 The website uses a black, white and red colour scheme to create a strong and modern visual identity suitable for the dance competition theme.
 
-CSS was used to style the navigation, headings, buttons, competition category cards, forms, gallery, contact section and page layouts.
+CSS was used to style the navigation, headings, buttons, competition category cards, forms, gallery, contact section and page layouts. CSS Flexbox and responsive media queries help organise the content and adjust the layouts for different screen sizes (Mozilla, n.d.-b; W3Schools, n.d.-b).
 
 The competition category cards include hover effects that display additional information about each category. The website also uses consistent navigation and footer layouts across its pages.
 
 ## JavaScript Functionality
 
-JavaScript was added to make the website more interactive, particularly the Apply and Contact pages. The JavaScript code is contained in `script.js`.
+JavaScript was added to make the website more interactive, particularly the Apply and Contact pages. The JavaScript code is contained in `script.js`. JavaScript event listeners and form validation methods are used to respond to user interactions and check form information (Mozilla, n.d.-c; Mozilla, n.d.-d; Mozilla, n.d.-e).
 
 ### Apply Page
 
@@ -79,6 +80,8 @@ The process includes:
 - **Confirmation Screen:** A confirmation screen is displayed after the competitor confirms the application.
 - **New Application:** The form can be used again to start another application.
 
+The application process also supports different registration types, including individual, couple and studio/group applications. Competitors can add or remove competitor details where applicable.
+
 This makes the application process easier to follow and gives competitors an opportunity to check their information before confirmation.
 
 ### Apply Page Flowchart
@@ -92,11 +95,19 @@ The following flowchart illustrates the application process and its main decisio
 JavaScript was also added to the Contact page to improve form validation and user feedback.
 
 - Checks that the required fields are completed correctly.
+- Validates the email address using HTML form validation.
+- Checks the minimum and maximum character limits for applicable fields.
 - Displays a validation message when the details are incomplete or invalid.
 - Displays feedback after the details pass validation.
 - Clears the form fields after valid details have been checked.
 
 The contact form currently provides front-end validation and feedback. An email or server-side submission service is not connected, so the enquiry is not automatically sent.
+
+## Gallery and Lightbox
+
+The Gallery page displays photographs and event highlights from Legends Are Made Dance Series.
+
+A lightbox effect was implemented to allow visitors to view photographs in an enlarged display. The Elementor tutorial was consulted to understand how to implement lightbox functionality (Elementor, n.d.).
 
 ## Home Page Content Structure
 
@@ -123,22 +134,7 @@ This is a content structure diagram rather than a process flowchart because it s
 
 ## Responsive Design
 
-The website was developed to be responsive across different screen sizes and devices. The layout, navigation, images, forms and content adjust to provide a consistent user experience on desktop, tablet and mobile devices.
-
-## Changelog
-
-### Part 2 – Feedback Improvements
-- Added a reference list to address the lecturer's feedback that references were missing.
-- Retained the existing responsive layout, consistent colour palette, typography and styling across the website.
-- Maintained the use of CSS Flexbox, hover transitions, form focus states and responsive media queries.
-
-### Part 3 – Development Updates
-- Added JavaScript functionality to the Apply page, including conditional application sections, form validation, competitor management, application review, editing and confirmation.
-- Improved the Contact page with required-field validation and user feedback messages.
-- Added an enquiry type selection and minimum and maximum character limits to the contact form.
-- Added validation messages to help users identify incomplete or invalid information.
-- Organised project screenshots into the `website_evidence_screenshots` folder and updated their paths in the README.
-- Continued testing the website's functionality and responsiveness across desktop, tablet and mobile screen sizes.
+The website was developed to be responsive across different screen sizes and devices. The layout, navigation, images, forms and content adjust to provide a consistent user experience on desktop, tablet and mobile devices. Responsive CSS techniques and media queries were used to achieve this (Mozilla, n.d.-b).
 
 ### Desktop
 
@@ -146,23 +142,23 @@ The following screenshots show all website pages on a desktop/laptop screen.
 
 #### Home
 
-![Home Page - Desktop](https://github.com/MoeketsiNteo/Legends-Are-Made/blob/f463223cf1561bc74a6d0cc815f151cad6786819/desktop-home.png)
+![Home Page - Desktop](website_evidence_screenshots/desktop-home.png)
 
 #### Competitions
 
-![Competitions Page - Desktop](https://github.com/MoeketsiNteo/Legends-Are-Made/blob/ddb730f63e38c9a463acafc225d6f6262022a377/desktop-competitions.png)
+![Competitions Page - Desktop](website_evidence_screenshots/desktop-competitions.png)
 
 #### Apply
 
-![Apply Page - Desktop](https://github.com/MoeketsiNteo/Legends-Are-Made/blob/3c2364ea2cdf27189d8bb87b2fd5ea7746319d44/desktop-apply.png)
+![Apply Page - Desktop](website_evidence_screenshots/desktop-apply.png)
 
 #### Gallery
 
-![Gallery Page - Desktop](https://github.com/MoeketsiNteo/Legends-Are-Made/blob/b5fe82661a1625b05de795cccac3812a31edc15e/desktop-gallery.png)
+![Gallery Page - Desktop](website_evidence_screenshots/desktop-gallery.png)
 
 #### Contact
 
-![Contact Page - Desktop](https://github.com/MoeketsiNteo/Legends-Are-Made/blob/8ab8a011c56df9fd710bf84c4cea8f74d174cfdb/desktop-contact.png)
+![Contact Page - Desktop](website_evidence_screenshots/desktop-contact.png)
 
 ### Tablet
 
@@ -170,23 +166,23 @@ The following screenshots show all website pages on a tablet device.
 
 #### Home
 
-![Home Page - Tablet](https://github.com/MoeketsiNteo/Legends-Are-Made/blob/1de42ff8c94c526a7c16065193e8fb58d34ce43d/tablet-home.png)
+![Home Page - Tablet](website_evidence_screenshots/tablet-home.png)
 
 #### Competitions
 
-![Competitions Page - Tablet](https://github.com/MoeketsiNteo/Legends-Are-Made/blob/ad06e44575d6820b9e86caaad715905805338e78/tablet-competitions.png)
+![Competitions Page - Tablet](website_evidence_screenshots/tablet-competitions.png)
 
 #### Apply
 
-![Apply Page - Tablet](https://github.com/MoeketsiNteo/Legends-Are-Made/blob/c96ccb71b174c8880ae5f1227d9cfe8fe5bafceb/tablet-apply.png)
+![Apply Page - Tablet](website_evidence_screenshots/tablet-apply.png)
 
 #### Gallery
 
-![Gallery Page - Tablet](https://github.com/MoeketsiNteo/Legends-Are-Made/blob/3d934bdcac9667d9e80e1dfd00957a672a7676c7/tablet-gallery.png)
+![Gallery Page - Tablet](website_evidence_screenshots/tablet-gallery.png)
 
 #### Contact
 
-![Contact Page - Tablet](https://github.com/MoeketsiNteo/Legends-Are-Made/blob/6addb7fdbb5dce12ad36fc697d969650a8141bea/tablet-contact.png)
+![Contact Page - Tablet](website_evidence_screenshots/tablet-contact.png)
 
 ### Mobile
 
@@ -194,23 +190,23 @@ The following screenshots show all website pages on a mobile device.
 
 #### Home
 
-![Home Page - Mobile](https://github.com/MoeketsiNteo/Legends-Are-Made/blob/94a7a28daaf753dda9f11df53f94fcc3d4632f50/mobile-home.png)
+![Home Page - Mobile](website_evidence_screenshots/mobile-home.png)
 
 #### Competitions
 
-![Competitions Page - Mobile](https://github.com/MoeketsiNteo/Legends-Are-Made/blob/8b9e7ab4769ed220f5d4677c2c16366000538b35/mobile-competitions.png)
+![Competitions Page - Mobile](website_evidence_screenshots/mobile-competitions.png)
 
 #### Apply
 
-![Apply Page - Mobile](https://github.com/MoeketsiNteo/Legends-Are-Made/blob/b0ac48f28ebfafdb7c58fa42f1b857a5c7cd4b24/mobile-apply.png)
+![Apply Page - Mobile](website_evidence_screenshots/mobile-apply.png)
 
 #### Gallery
 
-![Gallery Page - Mobile](https://github.com/MoeketsiNteo/Legends-Are-Made/blob/916a96720b3f948e49f61283c04e84c3e323570c/mobile-gallery.png)
+![Gallery Page - Mobile](website_evidence_screenshots/mobile-gallery.png)
 
 #### Contact
 
-![Contact Page - Mobile](https://github.com/MoeketsiNteo/Legends-Are-Made/blob/278360d922c6c307f995245282ef919d435137d6/mobile-contact.png)
+![Contact Page - Mobile](website_evidence_screenshots/mobile-contact.png)
 
 ## Timeline and Milestones
 
@@ -218,26 +214,56 @@ The following screenshots show all website pages on a mobile device.
 |---|---|
 | Part 1 | Organisation selection, proposal, research, requirements and sitemap |
 | Part 2 | Wireframes, visual design and website development using HTML and CSS |
-| Part 3 | JavaScript functionality, testing, improvements, finalisation and deployment |
+| Part 3 | JavaScript functionality, form validation, testing, improvements, finalisation and deployment |
 
 The overall project is expected to take approximately **6–8 weeks**.
 
 ## Project Status
 
-The website has been developed using HTML5, CSS3 and JavaScript. The current implementation includes responsive layouts, navigation, category hover effects, an interactive application process, form validation and user feedback.
+The website has been developed using HTML5, CSS3 and JavaScript. The current implementation includes responsive layouts, navigation, category hover effects, an interactive application process, a gallery lightbox, form validation and user feedback.
 
-The Apply page includes a review and confirmation process, while the Contact page provides front-end validation. Further testing and improvements can be completed as part of the final stage of the project.
+The Apply page includes a review and confirmation process, while the Contact page provides front-end validation. The website has also been tested across desktop, tablet and mobile screen sizes.
 
-## References
+The application and contact forms currently provide front-end functionality. They do not submit information to a server or store it in a database.
 
-The following sources were consulted during the development of the Legends Are Made Dance Series website.
+## Changelog
 
-- Mozilla Developer Network (MDN) (n.d.) *HTML: HyperText Markup Language*. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML
-- Mozilla Developer Network (MDN) (n.d.) *CSS: Cascading Style Sheets*. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS
-- Mozilla Developer Network (MDN) (n.d.) *JavaScript*. Available at: https://developer.mozilla.org/en-US/docs/Web/JavaScript
-- W3Schools (n.d.) *HTML Tutorial*. Available at: https://www.w3schools.com/html/
-- W3Schools (n.d.) *CSS Tutorial*. Available at: https://www.w3schools.com/css/
-- W3Schools (n.d.) *JavaScript Tutorial*. Available at: https://www.w3schools.com/js/
+### Part 2 – Feedback Improvements
 
+- Added a reference list to address the lecturer's feedback that references were missing.
+- Retained the existing responsive layout, consistent colour palette and typography across the website.
+- Maintained the use of CSS Flexbox, hover transitions, form focus states and responsive media queries.
 
+### Part 3 – Development Updates
 
+- Added JavaScript functionality to the Apply page.
+- Introduced conditional application sections for individual, couple and studio/group registrations.
+- Added competitor management functionality for studio/group applications.
+- Added application form validation.
+- Introduced an application review screen, edit option and confirmation screen.
+- Improved the Contact page with required-field validation and user feedback messages.
+- Added an enquiry type selection and character limits to the contact form.
+- Implemented a lightbox effect on the Gallery page.
+- Organised project evidence screenshots into the `website_evidence_screenshots` folder.
+- Updated README screenshot paths to reflect the new folder structure.
+- Continued testing the website's functionality and responsiveness across desktop, tablet and mobile screen sizes.
+
+## References20
+
+Elementor (n.d.) *How to Add a Dynamic Lightbox to Your WordPress Website* [YouTube video]. Available at: https://youtu.be/80NLEjV2UNE (Accessed: 10 October  2026).
+
+Mozilla (n.d.-a) *HTML: HyperText Markup Language*. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML (Accessed: 4 September 2026).
+
+Mozilla (n.d.-b) *CSS: Cascading Style Sheets*. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS (Accessed: 7 October 2026).
+
+Mozilla (n.d.-c) *JavaScript*. Available at: https://developer.mozilla.org/en-US/docs/Web/JavaScript (Accessed: 25 October 2026).
+
+Mozilla (n.d.-d) *HTMLFormElement: checkValidity() method*. Available at: https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/checkValidity (Accessed: 20 October 2026).
+
+Mozilla (n.d.-e) *HTMLFormElement: reportValidity() method*. Available at: https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reportValidity (Accessed:20 October 2026).
+
+W3Schools (n.d.-a) *HTML Tutorial*. Available at: https://www.w3schools.com/html/ (Accessed: 5 September 2026).
+
+W3Schools (n.d.-b) *CSS Tutorial*. Available at: https://www.w3schools.com/css/ (Accessed: 7 October 2026).
+
+W3Schools (n.d.-c) *JavaScript Tutorial*. Available at: https://www.w3schools.com/js/ (Accessed:27 October 2026).
